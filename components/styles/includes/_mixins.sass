@@ -1,0 +1,35 @@
+
+=flex($jc: center, $ai: center, $dir: null, $wrap: null, $disp: flex)
+	display: $disp
+	justify-content: $jc
+	align-items: $ai
+	flex-direction: $dir
+	flex-wrap: $wrap
+
+@function em($target, $parent)
+	@return $target / $parent + 0em
+
+=img-resp
+	vertical-align: middle
+	max-width: 100%
+	height: auto
+
+=img-cover
+	width: 100%
+	height: 100%
+	object-fit: cover	
+
+=media($width)
+	@media screen and ( max-width: $width )
+		&
+			@content
+
+=placeholder
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&::-ms-input-placeholder
+		@content

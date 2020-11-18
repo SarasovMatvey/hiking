@@ -1,3 +1,10 @@
+//- blocks
+include ../_b-logo/_logo.pug
+include ../_b-btn/_btn.pug
+
+//- parts
+include ../_hero/_hero.pug
+
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -7,4 +14,5 @@ html(lang="en")
         style
             include ../../css/style.css
     body
-        block test
+        .wrapper
+            block content

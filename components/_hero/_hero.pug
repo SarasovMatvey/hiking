@@ -1,0 +1,19 @@
+mixin hero(data)
+    section.hero
+        .hero__container.container
+            nav.hero__nav
+                a.hero__link(href="#") Home
+                a.hero__link(href="#") About
+                a.hero__link(href="#") Our Tours
+                a.hero__logo(href="#") 
+                    +logo
+                a.hero__link(href="#") testimonial
+                a.hero__link(href="#") Events
+                a.hero__link(href="#") Contact
+            .hero__content
+                h1.hero__title
+                    span.hero__title-mark life's 
+                    | a climb but 
+                    span.hero__title-mark the view is 
+                    | great
+                +btn("let's go together")(href="#")

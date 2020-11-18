@@ -1,0 +1,8 @@
+mixin btn(text, className, tag = "a")
+    case tag
+        when "a"
+            a.btn(class = className href = attributes.href)= text
+        when "button"
+            button.btn(class = className type = attributes.type)= text
+
+
