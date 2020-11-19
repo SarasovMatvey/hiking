@@ -179,7 +179,7 @@ table {
   background-color: var(--c-brand);
 }
 
-.section-title {
+.title {
   position: relative;
   display: inline-block;
   font-size: 3.4375rem;
@@ -188,7 +188,7 @@ table {
   font-family: "Lato";
   text-transform: uppercase;
 }
-.section-title:after {
+.title:after {
   content: "";
   position: absolute;
   left: 50%;
@@ -197,6 +197,16 @@ table {
   width: 9.375rem;
   height: 0.125rem;
   background: var(--c-brand);
+}
+
+.title_theme_card {
+  font-size: 1.25rem;
+  letter-spacing: 0rem;
+  color: var(--c-brand);
+  font-weight: 700;
+}
+.title_theme_card::after {
+  display: none;
 }
 
 .text {
@@ -265,6 +275,50 @@ table {
 }
 .about-us__text {
   line-height: 2;
+}
+
+.tours {
+  padding: 5.9375rem 0 5.3125rem;
+  background: var(--c-dark-5);
+  text-align: center;
+}
+.tours__container {
+  max-width: 75.9375rem;
+}
+.tours__title-block {
+  margin-bottom: 8.4375rem;
+}
+.tours__title {
+  margin-bottom: 3.75rem;
+}
+.tours__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tours__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 0 33.333%;
+  margin-bottom: 6.5625rem;
+  padding: 0 0.9375rem;
+}
+.tours__icon-wrap {
+  width: 6.875rem;
+}
+.tours__icon {
+  display: inline-block;
+  margin-bottom: 1.875rem;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+.tours__item-title {
+  margin-bottom: 1.5625rem;
+}
+.tours__item-text {
+  max-width: 290px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */

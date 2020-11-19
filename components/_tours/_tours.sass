@@ -1,0 +1,28 @@
+.tours
+    padding: 5.9375rem 0 5.3125rem
+    background: var(--c-dark-5)
+    text-align: center
+    &__container
+        max-width: 75.9375rem
+    &__title-block
+        margin-bottom: 8.4375rem
+    &__title
+        margin-bottom: 3.75rem
+    &__list
+        +flex($jc: null, $ai: null, $dir: null, $wrap: wrap, $disp: flex)
+    &__item
+        +flex($jc: null, $ai: center, $dir: column, $wrap: null, $disp: flex)
+        flex: 0 0 33.333%
+        margin-bottom: 6.5625rem
+        padding: 0 0.9375rem
+    &__icon-wrap
+        width: 6.875rem
+    &__icon
+        display: inline-block
+        margin-bottom: 1.875rem
+        +img-resp
+    &__item-title
+        margin-bottom: 1.5625rem
+    &__item-text
+        max-width: 290px
+        margin: 0 auto

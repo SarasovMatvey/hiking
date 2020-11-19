@@ -185,7 +185,7 @@ table {
   background-color: var(--c-brand);
 }
 
-.section-title {
+.title {
   position: relative;
   display: inline-block;
   font-size: 3.4375rem;
@@ -194,7 +194,7 @@ table {
   font-family: "Lato";
   text-transform: uppercase;
 }
-.section-title:after {
+.title:after {
   content: "";
   position: absolute;
   left: 50%;
@@ -203,6 +203,16 @@ table {
   width: 9.375rem;
   height: 0.125rem;
   background: var(--c-brand);
+}
+
+.title_theme_card {
+  font-size: 1.25rem;
+  letter-spacing: 0rem;
+  color: var(--c-brand);
+  font-weight: 700;
+}
+.title_theme_card::after {
+  display: none;
 }
 
 .text {
@@ -273,6 +283,50 @@ table {
   line-height: 2;
 }
 
+.tours {
+  padding: 5.9375rem 0 5.3125rem;
+  background: var(--c-dark-5);
+  text-align: center;
+}
+.tours__container {
+  max-width: 75.9375rem;
+}
+.tours__title-block {
+  margin-bottom: 8.4375rem;
+}
+.tours__title {
+  margin-bottom: 3.75rem;
+}
+.tours__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tours__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 0 33.333%;
+  margin-bottom: 6.5625rem;
+  padding: 0 0.9375rem;
+}
+.tours__icon-wrap {
+  width: 6.875rem;
+}
+.tours__icon {
+  display: inline-block;
+  margin-bottom: 1.875rem;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+.tours__item-title {
+  margin-bottom: 1.5625rem;
+}
+.tours__item-text {
+  max-width: 290px;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=style.css.map */
 
     </style>
@@ -290,8 +344,48 @@ table {
       </section>
       <section class="about-us">
         <div class="about-us__container container">
-          <h2 class="section-title about-us__title">who we are</h2>
+          <h2 class="title about-us__title">who we are</h2>
           <p class="text">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula. Pellentesque dictum augue non vestibulum ullamcorper. Donec eu placerat velit, vel malesuada libero. Vivamus sed justo turpis. Quisque vitae est non ipsum rutrum dapibus.</p>
+        </div>
+      </section>
+      <section class="tours">
+        <div class="tours__container container">
+          <div class="tours__title-block">
+            <h2 class="title tours__title">our tour</h2>
+            <p class="text">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem.</p>
+          </div>
+          <ul class="tours__list">
+            <li class="tours__item">
+              <div class="tours__icon-wrap"><img class="tours__icon" src="../../assets/img/icons/bicycle.svg" alt=""/></div>
+              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
+              <p class="text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
+            </li>
+            <li class="tours__item">
+              <div class="tours__icon-wrap"><img class="tours__icon" src="../../assets/img/icons/mountain.svg" alt=""/></div>
+              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
+              <p class="text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
+            </li>
+            <li class="tours__item">
+              <div class="tours__icon-wrap"><img class="tours__icon" src="../../assets/img/icons/bicycle.svg" alt=""/></div>
+              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
+              <p class="text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
+            </li>
+            <li class="tours__item">
+              <div class="tours__icon-wrap"><img class="tours__icon" src="../../assets/img/icons/bicycle.svg" alt=""/></div>
+              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
+              <p class="text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
+            </li>
+            <li class="tours__item">
+              <div class="tours__icon-wrap"><img class="tours__icon" src="../../assets/img/icons/bicycle.svg" alt=""/></div>
+              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
+              <p class="text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
+            </li>
+            <li class="tours__item">
+              <div class="tours__icon-wrap"><img class="tours__icon" src="../../assets/img/icons/bicycle.svg" alt=""/></div>
+              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
+              <p class="text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
+            </li>
+          </ul>
         </div>
       </section>
     </div>
