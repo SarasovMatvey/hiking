@@ -1,0 +1,10 @@
+mixin testimonial(data)
+    section.testimonial
+        .container.testimonial__container
+            +title("testimonial", "testimonial__title")
+            .testimonial__slider.owl-carousel#slider
+                .testimonial__slider-item
+                    .testimonial__img-wrap
+                        img.testimonial__img(src="../assets/img/testimonial-ava1.webp", alt="")
+                    +title("John Doe", "title_theme_card")
+                    +text("Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.")
