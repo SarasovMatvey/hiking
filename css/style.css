@@ -1,7 +1,8 @@
 @charset "UTF-8";
 :root {
   --c-brand: #d5423a;
-  --c-dark-0: #000;
+  --c-dark-0: rgb(0, 0, 0);
+  --c-dark-0-tr: 0, 0, 0;
   --c-dark-1: #231f20;
   --c-dark-2: #333;
   --c-dark-3: #525151;
@@ -418,6 +419,10 @@ table {
   display: none;
 }
 
+.title_color_white {
+  color: var(--c-light);
+}
+
 .text {
   font-size: 1rem;
   line-height: 1.4;
@@ -596,6 +601,60 @@ table {
 .testimonial .owl-dot.active {
   background: var(--c-brand) !important;
   opacity: 1;
+}
+
+.events {
+  padding: 8.125rem 0 8.75rem;
+  background: url("../../assets/img/events-bg.webp") center/cover no-repeat;
+  text-align: center;
+}
+.events__container {
+  max-width: 73.125rem;
+}
+.events__title {
+  margin-bottom: 5rem;
+}
+.events__cards {
+  margin: -0.875rem;
+  display: flex;
+}
+.events__card {
+  margin: 0 0.875rem;
+  flex: 1 0 0;
+  color: var(--c-light);
+}
+.events__img-wrap {
+  height: 18.75rem;
+}
+.events__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.events__card-content {
+  padding: 2.1875rem 2.5rem 1.75rem;
+  background: rgba(var(--c-dark-0-tr), 0.8);
+}
+.events__card-title {
+  margin-bottom: 1.5625rem;
+}
+.events__card-punct {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.625rem;
+  font-family: "Source Sans Pro";
+}
+.events__card-icon {
+  margin-right: 0.625rem;
+}
+.events .icon-calendar {
+  font-size: 0.9375rem;
+}
+.events .icon-map-marker {
+  font-size: 18px;
+}
+.events .icon-group {
+  font-size: 0.875rem;
 }
 
 /*# sourceMappingURL=style.css.map */

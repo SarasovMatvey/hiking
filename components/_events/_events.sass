@@ -1,0 +1,37 @@
+.events
+    padding: 8.125rem 0 8.75rem
+    background: url("../../assets/img/events-bg.webp") center/cover no-repeat
+    text-align: center
+    $events-cards-gap: 0.875rem
+    &__container
+        max-width: 73.125rem
+    &__title
+        margin-bottom: 5rem
+    &__cards
+        margin: 0 -$events-cards-gap
+        +flex($jc: null, $ai: null, $dir: null, $wrap: null, $disp: flex)
+    &__card
+        margin: 0 $events-cards-gap
+        flex: 1 0 0
+        color: var(--c-light)
+    &__img-wrap
+        height: 18.75rem
+    &__img
+        +img-cover
+    &__card-content
+        padding: 2.1875rem 2.5rem 1.75rem
+        background: #{'rgba(var(--c-dark-0-tr), 0.8)'}
+    &__card-title
+        margin-bottom: 1.5625rem
+    &__card-punct
+        +flex($jc: null, $ai: center, $dir: null, $wrap: null, $disp: flex)
+        margin-bottom: 0.625rem
+        font-family: "Source Sans Pro"
+    &__card-icon
+        margin-right: 0.625rem
+    .icon-calendar
+        font-size: 0.9375rem
+    .icon-map-marker
+        font-size: 1.125rem
+    .icon-group
+        font-size: 0.875rem
