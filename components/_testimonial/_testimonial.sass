@@ -1,7 +1,35 @@
 .testimonial
-    padding: 2.875rem 0 2rem
+    padding: 7.1875rem 0 5rem
     text-align: center
     &__container
-        max-width: 25.5rem
+        max-width: 46.875rem
     &__title
-        margin-bottom: 2.625rem
+        margin-bottom: 6.5625rem
+    &__slider
+        position: relative
+    &__slider-item
+        +flex($jc: null, $ai: center, $dir: column, $wrap: null, $disp: flex)
+    &__img-wrap
+        margin-bottom: 1.875rem
+        width: 8.125rem
+        height: 9.375rem
+    &__img
+        +img-cover
+    &__slider-title
+        margin-bottom: 1.25rem
+    &__slider-text
+        max-width: 35.3125rem
+    &__nav-icon
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        font-size: 55px
+        opacity: 0.1
+        color: var(--c-dark-3)
+        &:active
+            opacity: 0.7
+    &__nav-icon_left
+        left: -6.875rem
+    &__nav-icon_right
+        right: -6.875rem
+    
