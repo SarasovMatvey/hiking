@@ -4,7 +4,8 @@
   --c-dark-0: rgb(0, 0, 0);
   --c-dark-0-tr: 0, 0, 0;
   --c-dark-1: #231f20;
-  --c-dark-2: #333;
+  --c-dark-2: rgb(51, 51, 51);
+  --c-dark-2-tr: 51, 51, 51;
   --c-dark-3: #525151;
   --c-dark-4: #686868;
   --c-dark-5: #f6f6f8;
@@ -387,6 +388,7 @@ table {
   text-transform: uppercase;
   border-radius: 1.625rem;
   background-color: var(--c-brand);
+  cursor: pointer;
 }
 
 .title {
@@ -605,7 +607,9 @@ table {
 
 .events {
   padding: 8.125rem 0 8.75rem;
-  background: url("../../assets/img/events-bg.webp") center/cover no-repeat;
+  /* background: url("../../assets/img/events-bg.webp") center/cover no-repeat */
+  background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../../assets/img/events-bg.webp") center/cover no-repeat;
+  background-blend-mode: overlay, lighten, soft-light;
   text-align: center;
 }
 .events__container {
@@ -632,8 +636,11 @@ table {
   object-fit: cover;
 }
 .events__card-content {
+  position: relative;
+  text-align-last: left;
   padding: 2.1875rem 2.5rem 1.75rem;
   background: rgba(var(--c-dark-0-tr), 0.8);
+  overflow: hidden;
 }
 .events__card-title {
   margin-bottom: 1.5625rem;
@@ -651,10 +658,34 @@ table {
   font-size: 0.9375rem;
 }
 .events .icon-map-marker {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .events .icon-group {
   font-size: 0.875rem;
+}
+.events__btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  transform: translate(42.5%, 40%);
+  width: 5.4375rem;
+  height: 5.4375rem;
+  border: none;
+  background: var(--c-brand);
+  border-radius: 50%;
+  color: var(--c-light);
+  cursor: pointer;
+}
+.events__btn-icon {
+  position: absolute;
+  left: 25%;
+  top: 28%;
+}
+.events .icon-plus {
+  font-size: 1.125rem;
 }
 
 /*# sourceMappingURL=style.css.map */

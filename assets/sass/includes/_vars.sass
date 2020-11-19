@@ -2,7 +2,7 @@
 // It need because css variables don't support transparent. It force use this hack
 // Simply use --c-dark-0 for usual (not transparent) colors.
 // Use --c-dark-0-tr for transparent colors like this: background: rgba(var(--c-dark-0-tr), 0.4)
-// Note: in sass you must interpolate this. Example: #{'rgba(var(--c-dark-0-tr), 0.8)'}
+// Note: Sometimes in sass you must interpolate this. Example: #{'rgba(var(--c-dark-0-tr), 0.8)'}
 // And finally use $c-dark-0-rgb to tune color
     
 :root
@@ -11,7 +11,9 @@
     --c-dark-0: rgb(#{$c-dark-0-rgb})
     --c-dark-0-tr: #{$c-dark-0-rgb}
     --c-dark-1: #231f20
-    --c-dark-2: #333
+    $c-dark-2-rgb: 51,51,51
+    --c-dark-2: rgb(#{$c-dark-2-rgb})
+    --c-dark-2-tr: #{$c-dark-2-rgb}
     --c-dark-3: #525151
     --c-dark-4: #686868
     --c-dark-5: #f6f6f8

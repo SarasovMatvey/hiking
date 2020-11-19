@@ -1,6 +1,8 @@
 .events
     padding: 8.125rem 0 8.75rem
-    background: url("../../assets/img/events-bg.webp") center/cover no-repeat
+    /* background: url("../../assets/img/events-bg.webp") center/cover no-repeat */
+    background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)),  linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../../assets/img/events-bg.webp") center/cover no-repeat
+    background-blend-mode: overlay, lighten, soft-light
     text-align: center
     $events-cards-gap: 0.875rem
     &__container
@@ -19,8 +21,11 @@
     &__img
         +img-cover
     &__card-content
+        position: relative
+        text-align-last: left
         padding: 2.1875rem 2.5rem 1.75rem
         background: #{'rgba(var(--c-dark-0-tr), 0.8)'}
+        overflow: hidden
     &__card-title
         margin-bottom: 1.5625rem
     &__card-punct
@@ -35,3 +40,23 @@
         font-size: 1.125rem
     .icon-group
         font-size: 0.875rem
+    &__btn
+        position: absolute
+        +flex($jc: center, $ai: center, $dir: null, $wrap: null, $disp: flex)
+        right: 0
+        bottom: 0
+        transform: translate(42.5%, 40%)
+        width: 5.4375rem
+        height: 5.4375rem
+        border: none
+        // TODO сделать прозрачным
+        background: var(--c-brand)
+        border-radius: 50%
+        color: var(--c-light)
+        cursor: pointer
+    &__btn-icon
+        position: absolute
+        left: 25%
+        top: 28%
+    .icon-plus
+        font-size: 1.125rem
