@@ -94,6 +94,25 @@
   --gutters: 10px;
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
  * * v2.0 | 20110126
  * * License: none (public domain) */
@@ -166,23 +185,32 @@ table {
   background-color: var(--c-brand);
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-.wrapper {
+.section-title {
   position: relative;
-  min-height: 100%;
-  overflow: hidden;
+  display: inline-block;
+  font-size: 3.4375rem;
+  color: var(--c-dark-2);
+  font-weight: 300;
+  font-family: "Lato";
+  text-transform: uppercase;
+}
+.section-title:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1.125rem;
+  width: 9.375rem;
+  height: 0.125rem;
+  background: var(--c-brand);
 }
 
-a {
-  text-decoration: none;
+.text {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--c-dark-3);
+  font-family: "Source Sans Pro";
+  text-align: center;
 }
 
 .hero {
@@ -231,6 +259,20 @@ a {
   font-weight: 900;
 }
 
+.about-us {
+  text-align: center;
+  padding: 5.625rem 0;
+}
+.about-us__container {
+  max-width: 60rem;
+}
+.about-us__title {
+  margin-bottom: 3.4375rem;
+}
+.about-us__text {
+  line-height: 2;
+}
+
 /*# sourceMappingURL=style.css.map */
 
     </style>
@@ -244,6 +286,12 @@ a {
           <div class="hero__content">
             <h1 class="hero__title"><span class="hero__title-mark">life's </span>a climb but <span class="hero__title-mark">the view is </span>great</h1><a class="btn" href="#">let's go together</a>
           </div>
+        </div>
+      </section>
+      <section class="about-us">
+        <div class="about-us__container container">
+          <h2 class="section-title about-us__title">who we are</h2>
+          <p class="text">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula. Pellentesque dictum augue non vestibulum ullamcorper. Donec eu placerat velit, vel malesuada libero. Vivamus sed justo turpis. Quisque vitae est non ipsum rutrum dapibus.</p>
         </div>
       </section>
     </div>

@@ -1,0 +1,22 @@
+//- blocks
+include ../../../components/_b-logo/_logo.pug
+include ../../../components/_b-btn/_btn.pug
+include ../../../components/_b-title/_title.pug
+include ../../../components/_b-text/_text.pug
+
+//- parts
+include ../../../components/_hero/_hero.pug
+include ../../../components/_about-us/_about-us.pug
+include ../../../components/_tours/_tours.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Hiking
+        style
+            include ../../../css/style.css
+    body
+        .wrapper
+            block content
