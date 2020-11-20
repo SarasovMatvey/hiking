@@ -4,12 +4,13 @@ mixin contact(data)
             +title("contact", "contact__title")
             .contact__form
                 form.contact__form-inner
-                    .contact__form-group
-                        input.contact__form-field(type="text" name="name" placeholder="Name")
-                        input.contact__form-field(type="email" name="email" placeholder="Email")
-                    .contact__form-group.contact__form-group_mb_big
-                        input.contact__form-field(type="tel" name="phone" placeholder="Phone Number")
-                        input.contact__form-field(type="text" name="package" placeholder="Tour Package")
-                    .contact__form-group
-                        textarea.contact__form-field.contact__form-textarea(name="message" placeholder="Message")
+                    .contact__form-fields
+                        .contact__form-group
+                            input.contact__form-field(type="text" name="name" placeholder="Name")
+                            input.contact__form-field(type="email" name="email" placeholder="Email")
+                        .contact__form-group.contact__form-group_mb_big
+                            input.contact__form-field(type="tel" name="phone" placeholder="Phone Number")
+                            input.contact__form-field(type="text" name="package" placeholder="Tour Package")
+                        .contact__form-group
+                            textarea.contact__form-field.contact__form-textarea(name="message" placeholder="Message")
                     +btn("Send", "contact__btn", "button")(type="submit")

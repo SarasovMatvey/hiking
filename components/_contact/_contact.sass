@@ -5,18 +5,22 @@
     &__container
         max-width: 60.625rem
     &__title
-        margin-bottom: 7.5rem
+        margin-bottom: 7.8rem
+    &__form-fields
+        margin-bottom: 3.125rem
     &__form-group
         margin: 0 (-$fields-gap / 2)
-        margin-bottom: 3.75rem
+        margin-bottom: 3.45rem
         +flex($jc: null, $ai: null, $dir: null, $wrap: null, $disp: flex)
+        &:last-child
+            margin-bottom: 0
     &__form-group_mb_big
-        margin-bottom: 7.5rem
+        margin-bottom: 7.1rem
     &__form-field
         flex: 1 0 0
         margin: 0 $fields-gap / 2
         padding-left: 0.875rem  
-        padding-bottom: 0.6875rem
+        padding-bottom: 0.3875rem
         border: none
         border-bottom: 1px solid rgba(var(--c-dark-0-tr), 0.2)
         font-family: "Source Sans Pro"
@@ -29,5 +33,5 @@
     &__form-textarea
         resize: none
         line-height: normal
-        height: 2.125rem
+        height: 2.425rem
         overflow: visible

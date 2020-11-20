@@ -414,7 +414,7 @@ table {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -1.125rem;
+  bottom: -0.925rem;
   width: 9.375rem;
   height: 0.125rem;
   background: var(--c-brand);
@@ -442,6 +442,10 @@ table {
   text-align: center;
 }
 
+.text_bigger {
+  font-size: 1.125rem;
+}
+
 .hero {
   padding: 3.125rem 0;
   height: 100vh;
@@ -450,46 +454,27 @@ table {
   background: url(../assets/img/header-bg.webp) center/cover no-repeat;
 }
 .hero__container {
-  max-width: 64.6875rem;
+  max-width: 68rem;
 }
 .hero__nav {
-  margin: 0 -2.375rem;
-  margin-bottom: 10.9375rem;
+  margin-bottom: 9.7375rem;
+  margin-left: 4.5625rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-@media screen and (max-width: 1030px) {
-  .hero__nav {
-    flex-direction: column;
-  }
-}
 .hero__link {
-  margin: 0 2.375rem;
+  margin-top: 1.0625rem;
   text-transform: uppercase;
   font-size: 17px;
   color: var(--c-dark-1);
   font-weight: 700;
   white-space: nowrap;
 }
-@media screen and (max-width: 1030px) {
-  .hero__link {
-    margin: 0;
-    margin-bottom: 1.25rem;
-  }
-}
 .hero__logo {
-  margin: 0 1.375rem;
-}
-@media screen and (max-width: 1030px) {
-  .hero__logo {
-    order: -1;
-    width: 12rem;
-    margin: 0;
-    margin-bottom: 1.875rem;
-  }
-  .hero__logo .logo__img {
-    width: 100%;
-  }
+  flex-shrink: 0;
+  margin-right: 0;
+  margin-left: -0.5625rem;
 }
 .hero__content {
   margin: 0 auto;
@@ -497,12 +482,12 @@ table {
   text-align: center;
 }
 .hero__title {
-  margin-bottom: 3.125rem;
-  font-size: 4.375rem;
+  margin-bottom: 1.625rem;
+  font-size: 70px;
   line-height: 1.4;
   font-weight: 300;
   color: var(--c-dark-1);
-  letter-spacing: -0.0625rem;
+  letter-spacing: -1px;
   text-transform: uppercase;
 }
 .hero__title-mark {
@@ -512,20 +497,20 @@ table {
 
 .about-us {
   text-align: center;
-  padding: 5.625rem 0;
+  padding: 6.025rem 0;
 }
 .about-us__container {
   max-width: 60rem;
 }
 .about-us__title {
-  margin-bottom: 3.4375rem;
+  margin-bottom: 2.5375rem;
 }
 .about-us__text {
-  line-height: 2;
+  line-height: 1.8;
 }
 
 .tours {
-  padding: 5.9375rem 0 5.3125rem;
+  padding: 5.9375rem 0 3.9125rem;
   background: var(--c-dark-5);
   text-align: center;
 }
@@ -536,11 +521,12 @@ table {
   margin-bottom: 8.4375rem;
 }
 .tours__title {
-  margin-bottom: 3.75rem;
+  margin-bottom: 3.15rem;
 }
 .tours__list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -6.5625rem;
 }
 .tours__item {
   display: flex;
@@ -561,19 +547,19 @@ table {
   margin-bottom: 1.5625rem;
 }
 .tours__item-text {
-  max-width: 290px;
+  max-width: 18.25rem;
   margin: 0 auto;
 }
 
 .testimonial {
-  padding: 7.1875rem 0 5rem;
+  padding: 7.1875rem 0 5.4rem;
   text-align: center;
 }
 .testimonial__container {
   max-width: 46.875rem;
 }
 .testimonial__title {
-  margin-bottom: 6.5625rem;
+  margin-bottom: 6.1625rem;
 }
 .testimonial__slider {
   position: relative;
@@ -595,17 +581,17 @@ table {
   object-fit: cover;
 }
 .testimonial__slider-title {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
 }
 .testimonial__slider-text {
   max-width: 35.3125rem;
-  margin-bottom: 3.125rem;
+  margin-bottom: 2.525rem;
 }
 .testimonial__nav-icon {
   position: absolute;
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
-  font-size: 55px;
+  font-size: 5.875rem;
   opacity: 0.1;
   color: var(--c-dark-3);
 }
@@ -613,10 +599,10 @@ table {
   opacity: 0.7;
 }
 .testimonial__nav-icon_left {
-  left: -6.875rem;
+  left: -10.375rem;
 }
 .testimonial__nav-icon_right {
-  right: -6.875rem;
+  right: -10.375rem;
 }
 .testimonial .owl-dot {
   display: inline-block;
@@ -637,7 +623,7 @@ table {
 }
 
 .events {
-  padding: 8.125rem 0 8.75rem;
+  padding: 7.325rem 0 8.75rem;
   /* background: url("../../assets/img/events-bg.webp") center/cover no-repeat */
   background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.webp") center/cover no-repeat;
   background-blend-mode: overlay, lighten, soft-light;
@@ -647,10 +633,10 @@ table {
   max-width: 73.125rem;
 }
 .events__title {
-  margin-bottom: 5rem;
+  margin-bottom: 4.6rem;
 }
 .events__cards {
-  margin: -0.875rem;
+  margin: 0 -0.875rem;
   display: flex;
 }
 .events__card {
@@ -669,12 +655,12 @@ table {
 .events__card-content {
   position: relative;
   text-align-last: left;
-  padding: 2.1875rem 2.5rem 1.75rem;
+  padding: 2.1875rem 2.5rem 1.15rem;
   background: rgba(var(--c-dark-0-tr), 0.8);
   overflow: hidden;
 }
 .events__card-title {
-  margin-bottom: 1.5625rem;
+  margin-bottom: 1.2625rem;
 }
 .events__card-punct {
   display: flex;
@@ -686,10 +672,10 @@ table {
   margin-right: 0.625rem;
 }
 .events .icon-calendar {
-  font-size: 0.9375rem;
+  font-size: 0.8375rem;
 }
 .events .icon-map-marker {
-  font-size: 1.125rem;
+  font-size: 0.925rem;
 }
 .events .icon-group {
   font-size: 0.875rem;
@@ -727,21 +713,27 @@ table {
   max-width: 60.625rem;
 }
 .contact__title {
-  margin-bottom: 7.5rem;
+  margin-bottom: 7.8rem;
+}
+.contact__form-fields {
+  margin-bottom: 3.125rem;
 }
 .contact__form-group {
   margin: 0 -0.875rem;
-  margin-bottom: 3.75rem;
+  margin-bottom: 3.45rem;
   display: flex;
 }
+.contact__form-group:last-child {
+  margin-bottom: 0;
+}
 .contact__form-group_mb_big {
-  margin-bottom: 7.5rem;
+  margin-bottom: 7.1rem;
 }
 .contact__form-field {
   flex: 1 0 0;
   margin: 0 0.875rem;
   padding-left: 0.875rem;
-  padding-bottom: 0.6875rem;
+  padding-bottom: 0.3875rem;
   border: none;
   border-bottom: 1px solid rgba(var(--c-dark-0-tr), 0.2);
   font-family: "Source Sans Pro";
@@ -771,7 +763,7 @@ table {
 .contact__form-textarea {
   resize: none;
   line-height: normal;
-  height: 2.125rem;
+  height: 2.425rem;
   overflow: visible;
 }
 
@@ -780,6 +772,7 @@ table {
   background: var(--c-dark-0);
   color: rgba(var(--c-light-tr), 0.5);
   font-family: "Source Sans Pro";
+  font-size: 0.75rem;
 }
 .footer__container {
   max-width: 72.5rem;
@@ -796,7 +789,7 @@ table {
     <div class="wrapper">
       <section class="hero">
         <div class="hero__container container">
-          <nav class="hero__nav"><a class="hero__link" href="#">Home</a><a class="hero__link" href="#">About</a><a class="hero__link" href="#">Our Tours</a><a class="logo hero__logo" href="#123"><img class="logo__img" src="../assets/img/logo.png" alt="logo"/></a><a class="hero__link" href="#">testimonial</a><a class="hero__link" href="#">Events</a><a class="hero__link" href="#">Contact</a>
+          <nav class="hero__nav"><a class="hero__link" href="#">Home                        </a><a class="hero__link" href="#">About</a><a class="hero__link" href="#">Our Tours</a><a class="logo hero__logo" href="#123"><img class="logo__img" src="../assets/img/logo.png" alt="logo"/></a><a class="hero__link" href="#">testimonial</a><a class="hero__link" href="#">Events</a><a class="hero__link" href="#">Contact</a>
           </nav>
           <div class="hero__content">
             <h1 class="hero__title"><span class="hero__title-mark">life's </span>a climb but the view is <span class="hero__title-mark">great</span></h1><a class="btn" href="#">let's go together</a>
@@ -806,14 +799,14 @@ table {
       <section class="about-us">
         <div class="about-us__container container">
           <h2 class="title about-us__title">who we are</h2>
-          <p class="text about-us__text">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula. Pellentesque dictum augue non vestibulum ullamcorper. Donec eu placerat velit, vel malesuada libero. Vivamus sed justo turpis. Quisque vitae est non ipsum rutrum dapibus.</p>
+          <p class="text about-us__text text_bigger">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula. Pellentesque dictum augue non vestibulum ullamcorper. Donec eu placerat velit, vel malesuada libero. Vivamus sed justo turpis. Quisque vitae est non ipsum rutrum dapibus.</p>
         </div>
       </section>
       <section class="tours">
         <div class="tours__container container">
           <div class="tours__title-block">
             <h2 class="title tours__title">our tour</h2>
-            <p class="text tours__text">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem.</p>
+            <p class="text tours__text text_bigger">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem.</p>
           </div>
           <ul class="tours__list">
             <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/hiking-man.svg" alt=""/>
@@ -821,23 +814,23 @@ table {
               <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
             <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/mountain.svg" alt=""/>
-              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
+              <h2 class="title title_theme_card tours__item-title">Advanture</h2>
               <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
             <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/bicycle.svg" alt=""/>
-              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
+              <h2 class="title title_theme_card tours__item-title">biketour</h2>
               <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
             <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/car.svg" alt=""/>
-              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
+              <h2 class="title title_theme_card tours__item-title">offroad</h2>
               <p class="text tours__item-text">Mauris quam mauris, lorem condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
             <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/motorbike.svg" alt=""/>
-              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
+              <h2 class="title title_theme_card tours__item-title">Motobite</h2>
               <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
             <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/pack.svg" alt=""/>
-              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
+              <h2 class="title title_theme_card tours__item-title">essential</h2>
               <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
           </ul>
@@ -847,6 +840,11 @@ table {
         <div class="container testimonial__container">
           <h2 class="title testimonial__title">testimonial</h2>
           <ul class="testimonial__slider owl-carousel" id="slider">
+            <li class="testimonial__slider-item">
+              <div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div>
+              <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
+              <p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p>
+            </li>
             <li class="testimonial__slider-item">
               <div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div>
               <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
@@ -918,16 +916,18 @@ table {
           <h2 class="title contact__title">contact</h2>
           <div class="contact__form">
             <form class="contact__form-inner">
-              <div class="contact__form-group">
-                <input class="contact__form-field" type="text" name="name" placeholder="Name"/>
-                <input class="contact__form-field" type="email" name="email" placeholder="Email"/>
-              </div>
-              <div class="contact__form-group contact__form-group_mb_big">
-                <input class="contact__form-field" type="tel" name="phone" placeholder="Phone Number"/>
-                <input class="contact__form-field" type="text" name="package" placeholder="Tour Package"/>
-              </div>
-              <div class="contact__form-group">
-                <textarea class="contact__form-field contact__form-textarea" name="message" placeholder="Message"></textarea>
+              <div class="contact__form-fields">
+                <div class="contact__form-group">
+                  <input class="contact__form-field" type="text" name="name" placeholder="Name"/>
+                  <input class="contact__form-field" type="email" name="email" placeholder="Email"/>
+                </div>
+                <div class="contact__form-group contact__form-group_mb_big">
+                  <input class="contact__form-field" type="tel" name="phone" placeholder="Phone Number"/>
+                  <input class="contact__form-field" type="text" name="package" placeholder="Tour Package"/>
+                </div>
+                <div class="contact__form-group">
+                  <textarea class="contact__form-field contact__form-textarea" name="message" placeholder="Message"></textarea>
+                </div>
               </div>
               <button class="btn contact__btn" type="submit">Send</button>
             </form>

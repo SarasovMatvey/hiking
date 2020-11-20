@@ -1,5 +1,5 @@
 .events
-    padding: 8.125rem 0 8.75rem
+    padding: 7.325rem 0 8.75rem
     /* background: url("../../assets/img/events-bg.webp") center/cover no-repeat */
     background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)),  linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.webp") center/cover no-repeat
     background-blend-mode: overlay, lighten, soft-light
@@ -8,9 +8,9 @@
     &__container
         max-width: 73.125rem
     &__title
-        margin-bottom: 5rem
+        margin-bottom: 4.6rem
     &__cards
-        margin: 0 -$events-cards-gap
+        margin: 0 (-$events-cards-gap)
         +flex($jc: null, $ai: null, $dir: null, $wrap: null, $disp: flex)
     &__card
         margin: 0 $events-cards-gap
@@ -23,11 +23,11 @@
     &__card-content
         position: relative
         text-align-last: left
-        padding: 2.1875rem 2.5rem 1.75rem
+        padding: 2.1875rem 2.5rem 1.15rem
         background: #{'rgba(var(--c-dark-0-tr), 0.8)'}
         overflow: hidden
     &__card-title
-        margin-bottom: 1.5625rem
+        margin-bottom: 1.2625rem
     &__card-punct
         +flex($jc: null, $ai: center, $dir: null, $wrap: null, $disp: flex)
         margin-bottom: 0.625rem
@@ -35,9 +35,9 @@
     &__card-icon
         margin-right: 0.625rem
     .icon-calendar
-        font-size: 0.9375rem
+        font-size: 0.8375rem
     .icon-map-marker
-        font-size: 1.125rem
+        font-size: 0.925rem
     .icon-group
         font-size: 0.875rem
     &__btn
