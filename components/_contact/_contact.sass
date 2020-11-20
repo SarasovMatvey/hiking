@@ -1,0 +1,33 @@
+.contact
+    padding: 5.9375rem 0 4.375rem
+    text-align: center
+    $fields-gap: 1.75rem
+    &__container
+        max-width: 60.625rem
+    &__title
+        margin-bottom: 7.5rem
+    &__form-group
+        margin: 0 (-$fields-gap / 2)
+        margin-bottom: 3.75rem
+        +flex($jc: null, $ai: null, $dir: null, $wrap: null, $disp: flex)
+    &__form-group_mb_big
+        margin-bottom: 7.5rem
+    &__form-field
+        flex: 1 0 0
+        margin: 0 $fields-gap / 2
+        padding-left: 0.875rem  
+        padding-bottom: 0.6875rem
+        border: none
+        border-bottom: 1px solid rgba(var(--c-dark-0-tr), 0.2)
+        font-family: "Source Sans Pro"
+        font-size: 1rem
+        color: var(--c-dark-2)
+        +placeholder
+            font-family: "Source Sans Pro"
+            font-size: 1rem
+            color: var(--c-dark-2)
+    &__form-textarea
+        resize: none
+        line-height: normal
+        height: 2.125rem
+        overflow: visible

@@ -15,7 +15,8 @@
   --c-dark-3: #525151;
   --c-dark-4: #686868;
   --c-dark-5: #f6f6f8;
-  --c-light: #fff;
+  --c-light: rgb(255, 255, 255);
+  --c-light-tr: 255, 255, 255;
   --gutters: 10px;
 }
 
@@ -615,7 +616,7 @@ table {
 .events {
   padding: 8.125rem 0 8.75rem;
   /* background: url("../../assets/img/events-bg.webp") center/cover no-repeat */
-  background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../../assets/img/events-bg.webp") center/cover no-repeat;
+  background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.webp") center/cover no-repeat;
   background-blend-mode: overlay, lighten, soft-light;
   text-align: center;
 }
@@ -695,6 +696,75 @@ table {
   font-size: 1.125rem;
 }
 
+.contact {
+  padding: 5.9375rem 0 4.375rem;
+  text-align: center;
+}
+.contact__container {
+  max-width: 60.625rem;
+}
+.contact__title {
+  margin-bottom: 7.5rem;
+}
+.contact__form-group {
+  margin: 0 -0.875rem;
+  margin-bottom: 3.75rem;
+  display: flex;
+}
+.contact__form-group_mb_big {
+  margin-bottom: 7.5rem;
+}
+.contact__form-field {
+  flex: 1 0 0;
+  margin: 0 0.875rem;
+  padding-left: 0.875rem;
+  padding-bottom: 0.6875rem;
+  border: none;
+  border-bottom: 1px solid rgba(var(--c-dark-0-tr), 0.2);
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  color: var(--c-dark-2);
+}
+.contact__form-field::-webkit-input-placeholder {
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  color: var(--c-dark-2);
+}
+.contact__form-field:-moz-placeholder {
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  color: var(--c-dark-2);
+}
+.contact__form-field::-moz-placeholder {
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  color: var(--c-dark-2);
+}
+.contact__form-field::-ms-input-placeholder {
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  color: var(--c-dark-2);
+}
+.contact__form-textarea {
+  resize: none;
+  line-height: normal;
+  height: 2.125rem;
+  overflow: visible;
+}
+
+.footer {
+  padding: 2.1875rem 0 2.5rem;
+  background: var(--c-dark-0);
+  color: rgba(var(--c-light-tr), 0.5);
+  font-family: "Source Sans Pro";
+}
+.footer__container {
+  max-width: 72.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /*# sourceMappingURL=style.css.map */
 
     </style>
@@ -723,27 +793,27 @@ table {
             <p class="text tours__text">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem.</p>
           </div>
           <ul class="tours__list">
-            <li class="tours__item"><img class="tours__icon" src="../../assets/img/icons/hiking-man.svg" alt=""/>
+            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/hiking-man.svg" alt=""/>
               <h2 class="title title_theme_card tours__item-title">Hiking</h2>
               <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
-            <li class="tours__item"><img class="tours__icon" src="../../assets/img/icons/mountain.svg" alt=""/>
+            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/mountain.svg" alt=""/>
               <h2 class="title title_theme_card tours__item-title">Hiking</h2>
               <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
-            <li class="tours__item"><img class="tours__icon" src="../../assets/img/icons/bicycle.svg" alt=""/>
+            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/bicycle.svg" alt=""/>
               <h2 class="title title_theme_card tours__item-title">Hiking</h2>
               <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
-            <li class="tours__item"><img class="tours__icon" src="../../assets/img/icons/car.svg" alt=""/>
+            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/car.svg" alt=""/>
               <h2 class="title title_theme_card tours__item-title">Hiking</h2>
               <p class="text tours__item-text">Mauris quam mauris, lorem condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
-            <li class="tours__item"><img class="tours__icon" src="../../assets/img/icons/motorbike.svg" alt=""/>
+            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/motorbike.svg" alt=""/>
               <h2 class="title title_theme_card tours__item-title">Hiking</h2>
               <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
-            <li class="tours__item"><img class="tours__icon" src="../../assets/img/icons/pack.svg" alt=""/>
+            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/pack.svg" alt=""/>
               <h2 class="title title_theme_card tours__item-title">Hiking</h2>
               <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
             </li>
@@ -826,21 +896,24 @@ table {
           <div class="contact__form">
             <form class="contact__form-inner">
               <div class="contact__form-group">
-                <input class="contact__form-field" type="text" name="name"/>
-                <input class="contact__form-field" type="email" name="email"/>
+                <input class="contact__form-field" type="text" name="name" placeholder="Name"/>
+                <input class="contact__form-field" type="email" name="email" placeholder="Email"/>
+              </div>
+              <div class="contact__form-group contact__form-group_mb_big">
+                <input class="contact__form-field" type="tel" name="phone" placeholder="Phone Number"/>
+                <input class="contact__form-field" type="text" name="package" placeholder="Tour Package"/>
               </div>
               <div class="contact__form-group">
-                <input class="contact__form-field" type="tel" name="phone"/>
-                <input class="contact__form-field" type="text" name="package"/>
-              </div>
-              <div class="contact__form-group">
-                <textarea class="contact__form-field" name="message"></textarea>
+                <textarea class="contact__form-field contact__form-textarea" name="message" placeholder="Message"></textarea>
               </div>
               <button class="btn contact__btn" type="submit">Send</button>
             </form>
           </div>
         </div>
       </section>
+      <footer class="footer">
+        <div class="footer__container container"><small class="footer__copy">Copyright @ 2018. Hiking Adventure Tour Ltd. Alright reservar.</small><span class="footer__ps">Made with love by Creativo 27 Design Studio.</span></div>
+      </footer>
     </div>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>

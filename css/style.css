@@ -9,7 +9,8 @@
   --c-dark-3: #525151;
   --c-dark-4: #686868;
   --c-dark-5: #f6f6f8;
-  --c-light: #fff;
+  --c-light: rgb(255, 255, 255);
+  --c-light-tr: 255, 255, 255;
   --gutters: 10px;
 }
 
@@ -609,7 +610,7 @@ table {
 .events {
   padding: 8.125rem 0 8.75rem;
   /* background: url("../../assets/img/events-bg.webp") center/cover no-repeat */
-  background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../../assets/img/events-bg.webp") center/cover no-repeat;
+  background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.webp") center/cover no-repeat;
   background-blend-mode: overlay, lighten, soft-light;
   text-align: center;
 }
@@ -687,6 +688,75 @@ table {
 }
 .events .icon-plus {
   font-size: 1.125rem;
+}
+
+.contact {
+  padding: 5.9375rem 0 4.375rem;
+  text-align: center;
+}
+.contact__container {
+  max-width: 60.625rem;
+}
+.contact__title {
+  margin-bottom: 7.5rem;
+}
+.contact__form-group {
+  margin: 0 -0.875rem;
+  margin-bottom: 3.75rem;
+  display: flex;
+}
+.contact__form-group_mb_big {
+  margin-bottom: 7.5rem;
+}
+.contact__form-field {
+  flex: 1 0 0;
+  margin: 0 0.875rem;
+  padding-left: 0.875rem;
+  padding-bottom: 0.6875rem;
+  border: none;
+  border-bottom: 1px solid rgba(var(--c-dark-0-tr), 0.2);
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  color: var(--c-dark-2);
+}
+.contact__form-field::-webkit-input-placeholder {
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  color: var(--c-dark-2);
+}
+.contact__form-field:-moz-placeholder {
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  color: var(--c-dark-2);
+}
+.contact__form-field::-moz-placeholder {
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  color: var(--c-dark-2);
+}
+.contact__form-field::-ms-input-placeholder {
+  font-family: "Source Sans Pro";
+  font-size: 1rem;
+  color: var(--c-dark-2);
+}
+.contact__form-textarea {
+  resize: none;
+  line-height: normal;
+  height: 2.125rem;
+  overflow: visible;
+}
+
+.footer {
+  padding: 2.1875rem 0 2.5rem;
+  background: var(--c-dark-0);
+  color: rgba(var(--c-light-tr), 0.5);
+  font-family: "Source Sans Pro";
+}
+.footer__container {
+  max-width: 72.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
