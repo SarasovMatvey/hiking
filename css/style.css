@@ -389,6 +389,7 @@ table {
   border-radius: 1.625rem;
   background-color: var(--c-brand);
   cursor: pointer;
+  border: none;
 }
 
 .title {

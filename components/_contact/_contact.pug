@@ -1,0 +1,15 @@
+mixin contact(data)
+    section.contact
+        .contact__container.container
+            +title("contact", "contact__title")
+            .contact__form
+                form.contact__form-inner
+                    .contact__form-group
+                        input.contact__form-field(type="text" name="name")
+                        input.contact__form-field(type="email" name="email")
+                    .contact__form-group
+                        input.contact__form-field(type="tel" name="phone")
+                        input.contact__form-field(type="text" name="package")
+                    .contact__form-group
+                        textarea.contact__form-field(name="message")
+                    +btn("Send", "contact__btn", "button")(type="submit")

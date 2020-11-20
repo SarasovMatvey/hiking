@@ -395,6 +395,7 @@ table {
   border-radius: 1.625rem;
   background-color: var(--c-brand);
   cursor: pointer;
+  border: none;
 }
 
 .title {
@@ -817,6 +818,27 @@ table {
               </div>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="contact__container container">
+          <h2 class="title contact__title">contact</h2>
+          <div class="contact__form">
+            <form class="contact__form-inner">
+              <div class="contact__form-group">
+                <input class="contact__form-field" type="text" name="name"/>
+                <input class="contact__form-field" type="email" name="email"/>
+              </div>
+              <div class="contact__form-group">
+                <input class="contact__form-field" type="tel" name="phone"/>
+                <input class="contact__form-field" type="text" name="package"/>
+              </div>
+              <div class="contact__form-group">
+                <textarea class="contact__form-field" name="message"></textarea>
+              </div>
+              <button class="btn contact__btn" type="submit">Send</button>
+            </form>
+          </div>
         </div>
       </section>
     </div>
