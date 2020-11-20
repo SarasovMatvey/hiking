@@ -375,7 +375,8 @@ table {
 }
 
 .logo {
-  width: 148px;
+  width: 9.25rem;
+  text-align: center;
 }
 .logo__img {
   vertical-align: middle;
@@ -457,6 +458,11 @@ table {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 1030px) {
+  .hero__nav {
+    flex-direction: column;
+  }
+}
 .hero__link {
   margin: 0 2.375rem;
   text-transform: uppercase;
@@ -465,8 +471,25 @@ table {
   font-weight: 700;
   white-space: nowrap;
 }
+@media screen and (max-width: 1030px) {
+  .hero__link {
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+}
 .hero__logo {
   margin: 0 1.375rem;
+}
+@media screen and (max-width: 1030px) {
+  .hero__logo {
+    order: -1;
+    width: 12rem;
+    margin: 0;
+    margin-bottom: 1.875rem;
+  }
+  .hero__logo .logo__img {
+    width: 100%;
+  }
 }
 .hero__content {
   margin: 0 auto;
@@ -773,8 +796,8 @@ table {
     <div class="wrapper">
       <section class="hero">
         <div class="hero__container container">
-          <nav class="hero__nav"><a class="hero__link" href="#">Home</a><a class="hero__link" href="#">About</a><a class="hero__link" href="#">Our Tours</a><a class="hero__logo" href="#"> 
-              <div class="logo"><img class="logo__img" src="../assets/img/logo.png" alt="logo"/></div></a><a class="hero__link" href="#">testimonial</a><a class="hero__link" href="#">Events</a><a class="hero__link" href="#">Contact</a></nav>
+          <nav class="hero__nav"><a class="hero__link" href="#">Home</a><a class="hero__link" href="#">About</a><a class="hero__link" href="#">Our Tours</a><a class="logo hero__logo" href="#123"><img class="logo__img" src="../assets/img/logo.png" alt="logo"/></a><a class="hero__link" href="#">testimonial</a><a class="hero__link" href="#">Events</a><a class="hero__link" href="#">Contact</a>
+          </nav>
           <div class="hero__content">
             <h1 class="hero__title"><span class="hero__title-mark">life's </span>a climb but the view is <span class="hero__title-mark">great</span></h1><a class="btn" href="#">let's go together</a>
           </div>

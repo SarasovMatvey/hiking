@@ -1,3 +1,8 @@
-mixin logo(data)
-    .logo
-        img.logo__img(src="../assets/img/logo.png", alt="logo")
+mixin logo(className, tag="img")
+    case tag
+        when "img"
+            .logo(class = className)
+                img.logo__img(src="../assets/img/logo.png", alt="logo")
+        when "a"
+            a.logo(class = className, href=attributes.href)
+                img.logo__img(src="../assets/img/logo.png", alt="logo")
