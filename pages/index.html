@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Hiking</title>
-    <style>@charset "UTF-8";
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Hiking</title><style>@charset "UTF-8";
 :root {
   --c-brand: #d5423a;
   --c-dark-0: rgb(0, 0, 0);
@@ -108,6 +102,7 @@ html, body {
 
 .wrapper {
   position: relative;
+  min-width: 400px;
   min-height: 100%;
   overflow: hidden;
 }
@@ -446,12 +441,25 @@ table {
   font-size: 1.125rem;
 }
 
+.hidden-field {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
 .hero {
+  text-align: center;
   padding: 3.125rem 0;
   height: 100vh;
-  min-height: 50rem;
+  min-height: 900px;
   font-family: "Lato";
   background: url(../assets/img/header-bg.webp) center/cover no-repeat;
+}
+@media screen and (max-width: 920px) {
+  .hero {
+    height: auto;
+  }
 }
 .hero__container {
   max-width: 68rem;
@@ -463,23 +471,99 @@ table {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 920px) {
+  .hero__nav {
+    flex-direction: column;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
 .hero__link {
   margin-top: 1.0625rem;
   text-transform: uppercase;
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: var(--c-dark-1);
   font-weight: 700;
   white-space: nowrap;
+}
+@media screen and (max-width: 920px) {
+  .hero__link {
+    display: none;
+  }
+}
+.hero__link_mobile {
+  display: none;
+  font-size: 1.4rem;
+  margin: 0;
+  margin-bottom: 1.7rem;
+}
+@media screen and (max-width: 920px) {
+  .hero__link_mobile {
+    display: inline-block;
+  }
+}
+.hero__field-toggle {
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 920px) {
+  .hero__field-toggle {
+    display: inline-block;
+  }
+}
+.hero__mobile-nav {
+  display: none;
+  transition: 0.4s;
+  max-height: 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 920px) {
+  .hero__mobile-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.hero__hidden-field:checked ~ .hero__mobile-nav {
+  max-height: 18.75rem;
 }
 .hero__logo {
   flex-shrink: 0;
   margin-right: 0;
   margin-left: -0.5625rem;
+  margin: 0 1.375rem;
+}
+@media screen and (max-width: 920px) {
+  .hero__logo {
+    order: -1;
+    width: 12rem;
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+  .hero__logo .logo__img {
+    width: 100%;
+  }
+}
+.hero__field-icon {
+  display: inline-block;
+  transform: rotate(-90deg);
+  font-size: 2.5rem;
+  transition: 0.4s;
+}
+.hero__hidden-field:checked ~ .hero__field-toggle .hero__field-icon {
+  transform: rotate(-270deg);
 }
 .hero__content {
   margin: 0 auto;
   max-width: 630px;
   text-align: center;
+}
+@media screen and (max-width: 920px) {
+  .hero__content {
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+  }
 }
 .hero__title {
   margin-bottom: 1.625rem;
@@ -782,165 +866,7 @@ table {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <section class="hero">
-        <div class="hero__container container">
-          <nav class="hero__nav"><a class="hero__link" href="#">Home                        </a><a class="hero__link" href="#">About</a><a class="hero__link" href="#">Our Tours</a><a class="logo hero__logo" href="#123"><img class="logo__img" src="../assets/img/logo.png" alt="logo"/></a><a class="hero__link" href="#">testimonial</a><a class="hero__link" href="#">Events</a><a class="hero__link" href="#">Contact</a>
-          </nav>
-          <div class="hero__content">
-            <h1 class="hero__title"><span class="hero__title-mark">life's </span>a climb but the view is <span class="hero__title-mark">great</span></h1><a class="btn" href="#">let's go together</a>
-          </div>
-        </div>
-      </section>
-      <section class="about-us">
-        <div class="about-us__container container">
-          <h2 class="title about-us__title">who we are</h2>
-          <p class="text about-us__text text_bigger">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula. Pellentesque dictum augue non vestibulum ullamcorper. Donec eu placerat velit, vel malesuada libero. Vivamus sed justo turpis. Quisque vitae est non ipsum rutrum dapibus.</p>
-        </div>
-      </section>
-      <section class="tours">
-        <div class="tours__container container">
-          <div class="tours__title-block">
-            <h2 class="title tours__title">our tour</h2>
-            <p class="text tours__text text_bigger">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem.</p>
-          </div>
-          <ul class="tours__list">
-            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/hiking-man.svg" alt=""/>
-              <h2 class="title title_theme_card tours__item-title">Hiking</h2>
-              <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
-            </li>
-            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/mountain.svg" alt=""/>
-              <h2 class="title title_theme_card tours__item-title">Advanture</h2>
-              <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
-            </li>
-            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/bicycle.svg" alt=""/>
-              <h2 class="title title_theme_card tours__item-title">biketour</h2>
-              <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
-            </li>
-            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/car.svg" alt=""/>
-              <h2 class="title title_theme_card tours__item-title">offroad</h2>
-              <p class="text tours__item-text">Mauris quam mauris, lorem condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
-            </li>
-            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/motorbike.svg" alt=""/>
-              <h2 class="title title_theme_card tours__item-title">Motobite</h2>
-              <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
-            </li>
-            <li class="tours__item"><img class="tours__icon" src="../assets/img/icons/pack.svg" alt=""/>
-              <h2 class="title title_theme_card tours__item-title">essential</h2>
-              <p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="testimonial">
-        <div class="container testimonial__container">
-          <h2 class="title testimonial__title">testimonial</h2>
-          <ul class="testimonial__slider owl-carousel" id="slider">
-            <li class="testimonial__slider-item">
-              <div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div>
-              <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
-              <p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p>
-            </li>
-            <li class="testimonial__slider-item">
-              <div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div>
-              <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
-              <p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p>
-            </li>
-            <li class="testimonial__slider-item">
-              <div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div>
-              <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
-              <p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p>
-            </li>
-            <li class="testimonial__slider-item">
-              <div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div>
-              <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
-              <p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p>
-            </li>
-            <li class="testimonial__slider-item">
-              <div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div>
-              <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
-              <p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="events">
-        <div class="events__container container">
-          <h2 class="title title_color_white events__title">EVENTS</h2>
-          <ul class="events__cards">
-            <li class="events__card">
-              <div class="events__img-wrap"><img class="events__img" src="../assets/img/events-card-img1.webp" alt=""/></div>
-              <div class="events__card-content">
-                <h2 class="title title_theme_card events__card-title">offroad to bago yoma</h2>
-                <ul class="events__card-puncts">
-                  <li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li>
-                  <li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li>
-                  <li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li>
-                </ul>
-                <button class="events__btn"><i class="events__btn-icon icon-plus"></i></button>
-              </div>
-            </li>
-            <li class="events__card">
-              <div class="events__img-wrap"><img class="events__img" src="../assets/img/events-card-img2.webp" alt=""/></div>
-              <div class="events__card-content">
-                <h2 class="title title_theme_card events__card-title">offroad to bago yoma</h2>
-                <ul class="events__card-puncts">
-                  <li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li>
-                  <li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li>
-                  <li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li>
-                </ul>
-                <button class="events__btn"><i class="events__btn-icon icon-plus"></i></button>
-              </div>
-            </li>
-            <li class="events__card">
-              <div class="events__img-wrap"><img class="events__img" src="../assets/img/events-card-img3.webp" alt=""/></div>
-              <div class="events__card-content">
-                <h2 class="title title_theme_card events__card-title">offroad to bago yoma</h2>
-                <ul class="events__card-puncts">
-                  <li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li>
-                  <li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li>
-                  <li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li>
-                </ul>
-                <button class="events__btn"><i class="events__btn-icon icon-plus"></i></button>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="contact">
-        <div class="contact__container container">
-          <h2 class="title contact__title">contact</h2>
-          <div class="contact__form">
-            <form class="contact__form-inner">
-              <div class="contact__form-fields">
-                <div class="contact__form-group">
-                  <input class="contact__form-field" type="text" name="name" placeholder="Name"/>
-                  <input class="contact__form-field" type="email" name="email" placeholder="Email"/>
-                </div>
-                <div class="contact__form-group contact__form-group_mb_big">
-                  <input class="contact__form-field" type="tel" name="phone" placeholder="Phone Number"/>
-                  <input class="contact__form-field" type="text" name="package" placeholder="Tour Package"/>
-                </div>
-                <div class="contact__form-group">
-                  <textarea class="contact__form-field contact__form-textarea" name="message" placeholder="Message"></textarea>
-                </div>
-              </div>
-              <button class="btn contact__btn" type="submit">Send</button>
-            </form>
-          </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="footer__container container"><small class="footer__copy">Copyright @ 2018. Hiking Adventure Tour Ltd. Alright reservar.</small><span class="footer__ps">Made with love by Creativo 27 Design Studio.</span></div>
-      </footer>
-    </div>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script>$(document).ready(function(){
+</style></head><body><div class="wrapper"><section class="hero"><div class="hero__container container"><nav class="hero__nav"><a class="hero__link" href="#">Home                        </a><a class="hero__link" href="#">About</a><a class="hero__link" href="#">Our Tours</a><a class="logo hero__logo" href="#123"><img class="logo__img" src="../assets/img/logo.png" alt="logo"/></a><a class="hero__link" href="#">testimonial</a><a class="hero__link" href="#">Events</a><a class="hero__link" href="#">Contact</a></nav><input class="hidden-field hero__hidden-field" type="checkbox" id="hero-hidden-field"/><label class="hero__field-toggle" for="hero-hidden-field"><i class="hero__field-icon icon-chevron-left"></i></label><nav class="hero__mobile-nav"><a class="hero__link hero__link_mobile" href="#">Home                        </a><a class="hero__link hero__link_mobile" href="#">About</a><a class="hero__link hero__link_mobile" href="#">Our Tours</a><a class="hero__link hero__link_mobile" href="#">testimonial</a><a class="hero__link hero__link_mobile" href="#">Events</a><a class="hero__link hero__link_mobile" href="#">Contact</a></nav><div class="hero__content"><h1 class="hero__title"><span class="hero__title-mark">life's </span>a climb but the view is <span class="hero__title-mark">great</span></h1><a class="btn" href="#">let's go together</a></div></div></section><section class="about-us"><div class="about-us__container container"><h2 class="title about-us__title">who we are</h2><p class="text about-us__text text_bigger">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula. Pellentesque dictum augue non vestibulum ullamcorper. Donec eu placerat velit, vel malesuada libero. Vivamus sed justo turpis. Quisque vitae est non ipsum rutrum dapibus.</p></div></section><section class="tours"><div class="tours__container container"><div class="tours__title-block"><h2 class="title tours__title">our tour</h2><p class="text tours__text text_bigger">Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem.</p></div><ul class="tours__list"><li class="tours__item"><img class="tours__icon" src="../assets/img/icons/hiking-man.svg" alt=""/><h2 class="title title_theme_card tours__item-title">Hiking</h2><p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p></li><li class="tours__item"><img class="tours__icon" src="../assets/img/icons/mountain.svg" alt=""/><h2 class="title title_theme_card tours__item-title">Advanture</h2><p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p></li><li class="tours__item"><img class="tours__icon" src="../assets/img/icons/bicycle.svg" alt=""/><h2 class="title title_theme_card tours__item-title">biketour</h2><p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p></li><li class="tours__item"><img class="tours__icon" src="../assets/img/icons/car.svg" alt=""/><h2 class="title title_theme_card tours__item-title">offroad</h2><p class="text tours__item-text">Mauris quam mauris, lorem condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p></li><li class="tours__item"><img class="tours__icon" src="../assets/img/icons/motorbike.svg" alt=""/><h2 class="title title_theme_card tours__item-title">Motobite</h2><p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p></li><li class="tours__item"><img class="tours__icon" src="../assets/img/icons/pack.svg" alt=""/><h2 class="title title_theme_card tours__item-title">essential</h2><p class="text tours__item-text">Mauris quam mauris,  condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem, eu ultricies ligula.</p></li></ul></div></section><section class="testimonial"><div class="container testimonial__container"><h2 class="title testimonial__title">testimonial</h2><ul class="testimonial__slider owl-carousel" id="slider"><li class="testimonial__slider-item"><div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div><h2 class="title title_theme_card testimonial__slider-title">John Doe</h2><p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p></li><li class="testimonial__slider-item"><div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div><h2 class="title title_theme_card testimonial__slider-title">John Doe</h2><p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p></li><li class="testimonial__slider-item"><div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div><h2 class="title title_theme_card testimonial__slider-title">John Doe</h2><p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p></li><li class="testimonial__slider-item"><div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div><h2 class="title title_theme_card testimonial__slider-title">John Doe</h2><p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p></li><li class="testimonial__slider-item"><div class="testimonial__img-wrap"><img class="testimonial__img" src="../assets/img/testimonial-ava1.webp" alt=""/></div><h2 class="title title_theme_card testimonial__slider-title">John Doe</h2><p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p></li></ul></div></section><section class="events"><div class="events__container container"><h2 class="title title_color_white events__title">EVENTS</h2><ul class="events__cards"><li class="events__card"><div class="events__img-wrap"><img class="events__img" src="../assets/img/events-card-img1.webp" alt=""/></div><div class="events__card-content"><h2 class="title title_theme_card events__card-title">offroad to bago yoma</h2><ul class="events__card-puncts"><li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li><li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li><li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li></ul><button class="events__btn"><i class="events__btn-icon icon-plus"></i></button></div></li><li class="events__card"><div class="events__img-wrap"><img class="events__img" src="../assets/img/events-card-img2.webp" alt=""/></div><div class="events__card-content"><h2 class="title title_theme_card events__card-title">offroad to bago yoma</h2><ul class="events__card-puncts"><li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li><li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li><li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li></ul><button class="events__btn"><i class="events__btn-icon icon-plus"></i></button></div></li><li class="events__card"><div class="events__img-wrap"><img class="events__img" src="../assets/img/events-card-img3.webp" alt=""/></div><div class="events__card-content"><h2 class="title title_theme_card events__card-title">offroad to bago yoma</h2><ul class="events__card-puncts"><li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li><li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li><li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li></ul><button class="events__btn"><i class="events__btn-icon icon-plus"></i></button></div></li></ul></div></section><section class="contact"><div class="contact__container container"><h2 class="title contact__title">contact</h2><div class="contact__form"><form class="contact__form-inner"><div class="contact__form-fields"><div class="contact__form-group"><input class="contact__form-field" type="text" name="name" placeholder="Name"/><input class="contact__form-field" type="email" name="email" placeholder="Email"/></div><div class="contact__form-group contact__form-group_mb_big"><input class="contact__form-field" type="tel" name="phone" placeholder="Phone Number"/><input class="contact__form-field" type="text" name="package" placeholder="Tour Package"/></div><div class="contact__form-group"><textarea class="contact__form-field contact__form-textarea" name="message" placeholder="Message"></textarea></div></div><button class="btn contact__btn" type="submit">Send</button></form></div></div></section><footer class="footer"><div class="footer__container container"><small class="footer__copy">Copyright @ 2018. Hiking Adventure Tour Ltd. Alright reservar.</small><span class="footer__ps">Made with love by Creativo 27 Design Studio.</span></div></footer></div><script src="../node_modules/jquery/dist/jquery.min.js"></script><script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script><script>$(document).ready(function(){
     $("#slider").owlCarousel({
         items: 1,
         autoHeight: true,
@@ -948,7 +874,4 @@ table {
         nav: true,
         navText: ["<i class='testimonial__nav-icon testimonial__nav-icon_left icon-chevron-left'></i>","<i class='testimonial__nav-icon testimonial__nav-icon_right icon-chevron-right'></i>"]
     });
-  });
-    </script>
-  </body>
-</html>
+  });</script></body></html>

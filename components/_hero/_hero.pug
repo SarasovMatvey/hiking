@@ -9,6 +9,15 @@ mixin hero(data)
                 a.hero__link(href="#") testimonial
                 a.hero__link(href="#") Events
                 a.hero__link(href="#") Contact
+            input.hidden-field.hero__hidden-field(type="checkbox" id="hero-hidden-field")
+            label.hero__field-toggle(for="hero-hidden-field"): i.hero__field-icon.icon-chevron-left
+            nav.hero__mobile-nav
+                a.hero__link.hero__link_mobile(href="#") Home                        
+                a.hero__link.hero__link_mobile(href="#") About
+                a.hero__link.hero__link_mobile(href="#") Our Tours
+                a.hero__link.hero__link_mobile(href="#") testimonial
+                a.hero__link.hero__link_mobile(href="#") Events
+                a.hero__link.hero__link_mobile(href="#") Contact
             .hero__content
                 h1.hero__title
                     span.hero__title-mark life's 

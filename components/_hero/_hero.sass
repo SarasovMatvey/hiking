@@ -1,9 +1,12 @@
 .hero
+    text-align: center
     padding: 3.125rem 0
     height: 100vh
-    min-height: 50rem
+    min-height: 900px
     font-family: "Lato"
     background: url(../assets/img/header-bg.webp) center/cover no-repeat
+    +media(920px)
+        height: auto
     &__container
         max-width: 68rem
     &__nav
@@ -12,34 +15,69 @@
         // its need to set log in center of site
         margin-left: 4.5625rem
         +flex($jc: space-between, $ai: center, $dir: null, $wrap: null, $disp: flex)
-        // +media(1030px)
-        //     flex-direction: column
+        +media(920px)
+            flex-direction: column
+            margin-left: 0
+            margin-bottom: 0    
     &__link
         margin-top: 1.0625rem
         text-transform: uppercase
-        font-size: 17px
+        font-size: 1.0625rem
         color: var(--c-dark-1)
         font-weight: 700
         white-space: nowrap
-        // +media(1030px)
-        //     margin: 0
-        //     margin-bottom: 1.25rem
+        +media(920px)
+            display: none
+    &__link_mobile
+        display: none
+        font-size: 1.4rem
+        margin: 0
+        margin-bottom: 1.7rem
+        +media(920px)
+            display: inline-block
+    &__field-toggle
+        margin-bottom: 2.5rem
+        cursor: pointer
+        display: none
+        +media(920px)
+            display: inline-block
+    &__mobile-nav
+        display: none
+        transition: .4s
+        max-height: 0
+        overflow: hidden
+        +media(920px)
+            +flex($jc: null, $ai: center, $dir: column, $wrap: null, $disp: flex)
+    &__hidden-field:checked ~ &__mobile-nav
+        // TODO set this from JS
+        max-height: 18.75rem
     &__logo
         flex-shrink: 0
         margin-right: 0
         margin-left: -0.5625rem
-        // margin: 0 1.375rem
-        // +media(1030px)
-        //     order: -1
-        //     width: 12rem
-        //     margin: 0
-        //     margin-bottom: 1.875rem
-        //     .logo__img
-        //         width: 100%
+        margin: 0 1.375rem
+        +media(920px)
+            order: -1
+            width: 12rem
+            margin: 0
+            margin-bottom: 3rem
+            .logo__img
+                width: 100%
+    &__field-icon
+        display: inline-block
+        transform: rotate(-90deg)
+        font-size: 2.5rem
+        transition: .4s
+    &__hidden-field:checked ~ &__field-toggle
+        .hero__field-icon
+            transform: rotate(-270deg)
     &__content
         margin: 0 auto
         max-width: 630px
         text-align: center
+        +media(920px)
+            margin-top: 5rem
+            margin-bottom: 7rem
     &__title
         margin-bottom: 1.625rem
         font-size: 70px
