@@ -100,6 +100,12 @@ html, body {
   height: 100%;
 }
 
+@media screen and (min-width: 2000px) {
+  html {
+    font-size: 150% !important;
+  }
+}
+
 .wrapper {
   position: relative;
   min-width: 400px;
@@ -393,6 +399,7 @@ table {
   background-color: var(--c-brand);
   cursor: pointer;
   border: none;
+  font-size: 1rem;
 }
 
 .title {
@@ -772,13 +779,30 @@ table {
   margin-bottom: 4.6rem;
 }
 .events__cards {
+  margin: 0;
+  padding: 0;
   margin: 0 -0.875rem;
   display: flex;
+  flex-wrap: wrap;
 }
 .events__card {
   margin: 0 0.875rem;
-  flex: 1 0 0;
+  flex: 0 0 calc(33.333% - 1.75rem);
   color: var(--c-light);
+}
+@media screen and (max-width: 1120px) {
+  .events__card {
+    margin-bottom: 1.75rem;
+    flex-basis: calc(50% - 1.75rem);
+  }
+  .events__card:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 740px) {
+  .events__card {
+    flex-basis: calc(100% - 1.75rem);
+  }
 }
 .events__img-wrap {
   height: 18.75rem;
@@ -909,12 +933,16 @@ table {
   color: rgba(var(--c-light-tr), 0.5);
   font-family: "Source Sans Pro";
   font-size: 0.75rem;
+  line-height: 1.2;
 }
 .footer__container {
   max-width: 72.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.footer__copy {
+  margin-right: 1.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */

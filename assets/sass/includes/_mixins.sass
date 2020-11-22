@@ -24,6 +24,11 @@
 		&
 			@content
 
+=min-media($width)
+	@media screen and ( min-width: $width )
+		&
+			@content
+
 =placeholder
 	&::-webkit-input-placeholder
 		@content

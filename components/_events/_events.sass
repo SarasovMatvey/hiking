@@ -10,12 +10,21 @@
     &__title
         margin-bottom: 4.6rem
     &__cards
+        margin: 0
+        padding: 0
         margin: 0 (-$events-cards-gap)
-        +flex($jc: null, $ai: null, $dir: null, $wrap: null, $disp: flex)
+        +flex($jc: null, $ai: null, $dir: null, $wrap: wrap, $disp: flex)
     &__card
         margin: 0 $events-cards-gap
-        flex: 1 0 0
+        flex: 0 0 calc(33.333% - #{$events-cards-gap * 2})
         color: var(--c-light)
+        +media(1120px)
+            margin-bottom: $events-cards-gap * 2
+            flex-basis: calc(50% - #{$events-cards-gap * 2})
+            &:last-child
+                margin-bottom: 0
+        +media(740px)
+            flex-basis: calc(100% - #{$events-cards-gap * 2})
     &__img-wrap
         height: 18.75rem
     &__img
