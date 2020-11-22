@@ -1,8 +1,14 @@
-mixin logo(className, tag="img")
+//- block need for source tag
+
+mixin logo(className, path, tag="img")
     case tag
         when "img"
             .logo(class = className)
-                img.logo__img(src="../assets/img/logo.png", alt="logo")
+                picture
+                    block
+                    img.logo__img(src = path, alt="logo")
         when "a"
             a.logo(class = className, href=attributes.href)
-                img.logo__img(src="../assets/img/logo.png", alt="logo")
+                picture
+                    block
+                    img.logo__img(src = path, alt="logo")

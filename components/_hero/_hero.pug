@@ -5,7 +5,8 @@ mixin hero(data)
                 a.hero__link(href="#") Home                        
                 a.hero__link(href="#") About
                 a.hero__link(href="#") Our Tours
-                +logo("hero__logo", "a")(href="#123")
+                +logo("hero__logo", "../assets/img/logo.png", "a")(href="#123") 
+                    source(srcset="../assets/img/logo.svg", type="image/svg+xml")
                 a.hero__link(href="#") testimonial
                 a.hero__link(href="#") Events
                 a.hero__link(href="#") Contact
