@@ -497,6 +497,10 @@ table {
   color: var(--c-dark-1);
   font-weight: 700;
   white-space: nowrap;
+  transition: 0.2s;
+}
+.hero__link:hover {
+  text-shadow: 1px 0 0 var(--c-dark-1);
 }
 @media screen and (max-width: 920px) {
   .hero__link {
