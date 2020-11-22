@@ -1,8 +1,13 @@
 .testimonial
     padding: 7.1875rem 0 5.4rem
     text-align: center
+    --nav-icon-position: -10.375rem
+    +media(1200px)
+        --nav-icon-position: -6.375rem
     &__container
         max-width: 46.875rem
+        +media(980px)
+            max-width: 30rem
     &__title
         margin-bottom: 6.1625rem
     &__slider
@@ -21,6 +26,15 @@
     &__slider-text
         max-width: 35.3125rem
         margin-bottom: 2.525rem
+        +media(980px)
+            max-width: 25rem
+        +media(700px)
+            margin-bottom: 1rem
+    .owl-nav
+        +media(700px)
+            max-width: 17rem
+            margin: 0 auto
+            +flex($jc: space-between, $ai: center, $dir: null, $wrap: null, $disp: flex)
     &__nav-icon
         position: absolute
         top: 47%
@@ -30,10 +44,18 @@
         color: var(--c-dark-3)
         &:active
             opacity: 0.7
+        +media(700px)
+            position: static
+            transform: translateY(0)
+            font-size: 5rem
+            opacity: 0.7
     &__nav-icon_left
-        left: -10.375rem
+        left: var(--nav-icon-position)
     &__nav-icon_right
-        right: -10.375rem
+        right: var(--nav-icon-position)
+    .owl-dots
+        +media(700px)
+            display: none
     .owl-dot
         display: inline-block
         margin-right: 0.3125rem

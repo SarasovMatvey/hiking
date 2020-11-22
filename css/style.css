@@ -620,9 +620,18 @@ table {
   margin-bottom: 6.5625rem;
   padding: 0 0.9375rem;
 }
+@media screen and (max-width: 670px) {
+  .tours__item {
+    flex-basis: 50%;
+  }
+}
+.tours__icon-wrap {
+  height: 7rem;
+  margin-bottom: 0.025rem;
+  overflow: hidden;
+}
 .tours__icon {
   display: inline-block;
-  margin-bottom: 1.875rem;
   vertical-align: middle;
   max-width: 100%;
   height: auto;
@@ -638,9 +647,20 @@ table {
 .testimonial {
   padding: 7.1875rem 0 5.4rem;
   text-align: center;
+  --nav-icon-position: -10.375rem;
+}
+@media screen and (max-width: 1200px) {
+  .testimonial {
+    --nav-icon-position: -6.375rem;
+  }
 }
 .testimonial__container {
   max-width: 46.875rem;
+}
+@media screen and (max-width: 980px) {
+  .testimonial__container {
+    max-width: 30rem;
+  }
 }
 .testimonial__title {
   margin-bottom: 6.1625rem;
@@ -671,6 +691,25 @@ table {
   max-width: 35.3125rem;
   margin-bottom: 2.525rem;
 }
+@media screen and (max-width: 980px) {
+  .testimonial__slider-text {
+    max-width: 25rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .testimonial__slider-text {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .testimonial .owl-nav {
+    max-width: 17rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .testimonial__nav-icon {
   position: absolute;
   top: 47%;
@@ -682,11 +721,24 @@ table {
 .testimonial__nav-icon:active {
   opacity: 0.7;
 }
+@media screen and (max-width: 700px) {
+  .testimonial__nav-icon {
+    position: static;
+    transform: translateY(0);
+    font-size: 5rem;
+    opacity: 0.7;
+  }
+}
 .testimonial__nav-icon_left {
-  left: -10.375rem;
+  left: var(--nav-icon-position);
 }
 .testimonial__nav-icon_right {
-  right: -10.375rem;
+  right: var(--nav-icon-position);
+}
+@media screen and (max-width: 700px) {
+  .testimonial .owl-dots {
+    display: none;
+  }
 }
 .testimonial .owl-dot {
   display: inline-block;
