@@ -4,9 +4,12 @@
     height: 100vh
     min-height: 900px
     font-family: "Lato"
-    background: url(../assets/img/header-bg.webp) center/cover no-repeat
     +media(920px)
         height: auto
+    .webp &
+        background: url(../assets/img/header-bg.webp) center/cover no-repeat
+    .no-webp &
+        background: url(../assets/img/header-bg.jpg) center/cover no-repeat
     &__container
         max-width: 68rem
     &__nav

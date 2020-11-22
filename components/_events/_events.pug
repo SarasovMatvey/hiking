@@ -5,7 +5,9 @@ mixin events(data)
             ul.events__cards
                 li.events__card
                     .events__img-wrap
-                        img.events__img(src="../assets/img/events-card-img1.webp", alt="")
+                        picture
+                            source(srcset="../assets/img/events-card-img1.webp", type="image/webp")
+                            img.events__img(src="../assets/img/events-card-img1.jpg", alt="")
                     .events__card-content
                         +title("offroad to bago yoma", "title_theme_card events__card-title")
                         ul.events__card-puncts
@@ -22,7 +24,9 @@ mixin events(data)
                             i.events__btn-icon.icon-plus
                 li.events__card
                     .events__img-wrap
-                        img.events__img(src="../assets/img/events-card-img2.webp", alt="")
+                        picture
+                            source(srcset="../assets/img/events-card-img2.webp", type="image/webp")
+                            img.events__img(src="../assets/img/events-card-img2.jpg", alt="")
                     .events__card-content
                         +title("offroad to bago yoma", "title_theme_card events__card-title")
                         ul.events__card-puncts
@@ -39,7 +43,9 @@ mixin events(data)
                             i.events__btn-icon.icon-plus
                 li.events__card
                     .events__img-wrap
-                        img.events__img(src="../assets/img/events-card-img3.webp", alt="")
+                        picture
+                            source(srcset="../assets/img/events-card-img3.webp", type="image/webp")
+                            img.events__img(src="../assets/img/events-card-img3.jpg", alt="")
                     .events__card-content
                         +title("offroad to bago yoma", "title_theme_card events__card-title")
                         ul.events__card-puncts

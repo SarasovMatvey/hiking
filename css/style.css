@@ -461,12 +461,17 @@ table {
   height: 100vh;
   min-height: 900px;
   font-family: "Lato";
-  background: url(../assets/img/header-bg.webp) center/cover no-repeat;
 }
 @media screen and (max-width: 920px) {
   .hero {
     height: auto;
   }
+}
+.webp .hero {
+  background: url(../assets/img/header-bg.webp) center/cover no-repeat;
+}
+.no-webp .hero {
+  background: url(../assets/img/header-bg.jpg) center/cover no-repeat;
 }
 .hero__container {
   max-width: 68rem;
@@ -771,6 +776,12 @@ table {
   background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.webp") center/cover no-repeat;
   background-blend-mode: overlay, lighten, soft-light;
   text-align: center;
+}
+.webp .events {
+  background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.webp") center/cover no-repeat;
+}
+.no-webp .events {
+  background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.jpg") center/cover no-repeat;
 }
 .events__container {
   max-width: 73.125rem;
