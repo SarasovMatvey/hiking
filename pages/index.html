@@ -3083,13 +3083,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   display: flex;
   align-items: center;
   flex-direction: column;
-  flex: 0 0 33.333%;
-  margin-bottom: 6.5625rem;
-  padding: 0 0.9375rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(33.333% - 1.875rem);
+  margin: 0 0.9375rem 6.5625rem;
 }
 @media screen and (max-width: 670px) {
   .tours__item {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 1.875rem);
   }
 }
 .tours__icon-wrap {
@@ -3361,7 +3362,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   margin-bottom: 7.1rem;
 }
 .contact__form-field {
-  flex: 1 0 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
   margin: 0 0.875rem;
   padding-left: 0.875rem;
   padding-bottom: 0.3875rem;

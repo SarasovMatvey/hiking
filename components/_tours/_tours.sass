@@ -13,11 +13,12 @@
         margin-bottom: -6.5625rem
     &__item
         +flex($jc: null, $ai: center, $dir: column, $wrap: null, $disp: flex)
-        flex: 0 0 33.333%
-        margin-bottom: 6.5625rem
-        padding: 0 0.9375rem
+        flex-grow: 0
+        flex-shrink: 0
+        flex-basis: calc(33.333% - 1.875rem)
+        margin: 0 0.9375rem 6.5625rem
         +media(670px)
-            flex-basis: 50%
+            flex-basis: calc(50% - 1.875rem)
     &__icon-wrap
         height: 7rem
         margin-bottom: 0.025rem
