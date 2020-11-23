@@ -1,7 +1,6 @@
 .events
     padding: 7.325rem 0 8.75rem
     /* background: url("../../assets/img/events-bg.webp") center/cover no-repeat */
-    background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)),  linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.webp") center/cover no-repeat
     background-blend-mode: overlay, lighten, soft-light
     text-align: center
     $events-cards-gap: 0.875rem
@@ -9,6 +8,10 @@
         background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)),  linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.webp") center/cover no-repeat
     .no-webp &
         background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)),  linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.jpg") center/cover no-repeat
+    .no-js &
+        background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)),  linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.jpg") center/cover no-repeat
+    .no-backgroundblendmode &
+        background: linear-gradient(0deg, rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), url("../assets/img/events-bg.jpg") center/cover no-repeat
     &__container
         max-width: 73.125rem
     &__title

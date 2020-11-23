@@ -14,7 +14,7 @@ include ../../../components/_contact/_contact.pug
 include ../../../components/_footer/_footer.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html.no-js(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -28,7 +28,7 @@ html(lang="en")
         script(src="../node_modules/owl.carousel/dist/owl.carousel.min.js")
         script(src="../node_modules/wow.js/dist/wow.min.js")
         script
+            include ../../../assets/js/base.js
             include ../../../assets/js/owl-carousel.js
             include ../../../assets/js/modernizr.js
-        script.
-            new WOW().init();
+            include ../../../assets/js/wow.js       
