@@ -1,8 +1,9 @@
 mixin events(data)
     section.events#events
         .events__container.container
-            +title("EVENTS", "title_color_white events__title")
-            ul.events__cards
+            .events__title-wrap.wow.fadeInLeft(data-wow-offset="300")
+                +title("EVENTS", "title_color_white events__title")
+            ul.events__cards.wow.fadeInLeft(data-wow-offset="300")
                 li.events__card
                     .events__img-wrap
                         picture

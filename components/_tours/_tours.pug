@@ -1,10 +1,10 @@
 mixin tours(data)
     section.tours#tours
         .tours__container.container
-            .tours__title-block
+            .tours__title-block.wow.fadeInLeft(data-wow-offset="300")
                 +title("our tour", "tours__title")
                 +text("Mauris quam mauris, elementum et condimentum feugiat, sollicitudin eget leo. Mauris vel sagittis sem.", "tours__text text_bigger")
-            ul.tours__list
+            ul.tours__list.wow.fadeInLeft(data-wow-offset="300")
                 li.tours__item
                     .tours__icon-wrap
                         picture

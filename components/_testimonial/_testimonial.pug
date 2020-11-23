@@ -1,8 +1,9 @@
 mixin testimonial(data)
     section.testimonial#testimonial
         .container.testimonial__container
-            +title("testimonial", "testimonial__title")
-            ul.testimonial__slider.owl-carousel#slider
+            .testimonial__title-wrap.wow.fadeInLeft(data-wow-offset="300")
+                +title("testimonial", "testimonial__title")
+            ul.testimonial__slider.owl-carousel#slider.wow.fadeInLeft(data-wow-offset="300")
                 li.testimonial__slider-item
                     .testimonial__img-wrap
                         picture

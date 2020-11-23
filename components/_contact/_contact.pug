@@ -1,8 +1,9 @@
 mixin contact(data)
     section.contact#contact
         .contact__container.container
-            +title("contact", "contact__title")
-            .contact__form
+            .contact__wrap.wow.fadeInLeft(data-wow-offset="300")
+                +title("contact", "contact__title")
+            .contact__form.wow.fadeInLeft(data-wow-offset="300")
                 form.contact__form-inner
                     .contact__form-fields
                         .contact__form-group
