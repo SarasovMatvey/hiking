@@ -3114,6 +3114,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     --nav-icon-position: -6.375rem;
   }
 }
+.testimonial__defs {
+  position: absolute;
+}
 .testimonial__container {
   max-width: 46.875rem;
 }
@@ -3132,9 +3135,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-.testimonial__img-svg {
-  position: absolute;
 }
 .testimonial__img-wrap {
   margin-bottom: 1.875rem;
@@ -3281,7 +3281,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .events__card-content {
   position: relative;
-  text-align-last: left;
+  text-align: left;
   padding: 2.1875rem 2.5rem 1.15rem;
   background: rgba(var(--c-dark-0-tr), 0.8);
   overflow: hidden;

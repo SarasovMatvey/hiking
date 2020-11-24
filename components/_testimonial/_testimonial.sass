@@ -4,6 +4,8 @@
     --nav-icon-position: -10.375rem
     +media(1200px)
         --nav-icon-position: -6.375rem
+    &__defs
+        position: absolute
     &__container
         max-width: 46.875rem
         +media(980px)
@@ -15,7 +17,7 @@
     &__slider-item
         +flex($jc: null, $ai: center, $dir: column, $wrap: null, $disp: flex)
     &__img-svg
-        position: absolute
+        // position: absolute
     &__img-wrap
         margin-bottom: 1.875rem
         width: 8.125rem

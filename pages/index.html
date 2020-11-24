@@ -3122,6 +3122,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     --nav-icon-position: -6.375rem;
   }
 }
+.testimonial__defs {
+  position: absolute;
+}
 .testimonial__container {
   max-width: 46.875rem;
 }
@@ -3140,9 +3143,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-.testimonial__img-svg {
-  position: absolute;
 }
 .testimonial__img-wrap {
   margin-bottom: 1.875rem;
@@ -3289,7 +3289,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .events__card-content {
   position: relative;
-  text-align-last: left;
+  text-align: left;
   padding: 2.1875rem 2.5rem 1.15rem;
   background: rgba(var(--c-dark-0-tr), 0.8);
   overflow: hidden;
@@ -3512,10 +3512,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
           </ul>
         </div>
       </section>
-      <svg width="100%" height="100%" viewBox="0 0 100 100">
+      <svg class="testimonial__defs" viewBox="0 0 100 100">
         <defs>
-          <clipPath id="testimonial__clip-mask">
-            <polygon points="50 0, 100 25.3, 100 74.7, 50 100, 0 74.7, 0 25.3"></polygon>
+          <clipPath clipPathUnits="objectBoundingBox" id="testimonial__clip-mask">
+            <polygon points="0.5 0, 1 0.25, 1 0.74, 0.5 1, 0 0.74, 0 0.25"></polygon>
           </clipPath>
         </defs>
       </svg>
@@ -3528,7 +3528,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <li class="testimonial__slider-item">
               <div class="testimonial__img-wrap">
                 <svg class="testimonial__img-svg" width="100%" height="100%">
-                  <image class="testimonial__img" xlink:href="../assets/img/testimonial-ava1.jpg"></image>
+                  <image class="testimonial__img" width="100%" height="100%" xlink:href="../assets/img/testimonial-ava1.jpg" preserveAspectRatio="xMidYMid  slice"></image>
                 </svg>
               </div>
               <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
@@ -3536,36 +3536,36 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             </li>
             <li class="testimonial__slider-item">
               <div class="testimonial__img-wrap">
-                <picture>
-                  <source srcset="../assets/img/testimonial-ava1.webp" type="image/webp"/><img class="testimonial__img" src="../assets/img/testimonial-ava1.jpg" alt="man"/>
-                </picture>
+                <svg class="testimonial__img-svg" width="100%" height="100%">
+                  <image class="testimonial__img" width="100%" height="100%" xlink:href="../assets/img/testimonial-ava1.jpg" preserveAspectRatio="xMidYMid  slice"></image>
+                </svg>
               </div>
               <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
               <p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p>
             </li>
             <li class="testimonial__slider-item">
               <div class="testimonial__img-wrap">
-                <picture>
-                  <source srcset="../assets/img/testimonial-ava1.webp" type="image/webp"/><img class="testimonial__img" src="../assets/img/testimonial-ava1.jpg" alt="man"/>
-                </picture>
+                <svg class="testimonial__img-svg" width="100%" height="100%">
+                  <image class="testimonial__img" width="100%" height="100%" xlink:href="../assets/img/testimonial-ava1.jpg" preserveAspectRatio="xMidYMid  slice"></image>
+                </svg>
               </div>
               <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
               <p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p>
             </li>
             <li class="testimonial__slider-item">
               <div class="testimonial__img-wrap">
-                <picture>
-                  <source srcset="../assets/img/testimonial-ava1.webp" type="image/webp"/><img class="testimonial__img" src="../assets/img/testimonial-ava1.jpg" alt="man"/>
-                </picture>
+                <svg class="testimonial__img-svg" width="100%" height="100%">
+                  <image class="testimonial__img" width="100%" height="100%" xlink:href="../assets/img/testimonial-ava1.jpg" preserveAspectRatio="xMidYMid  slice"></image>
+                </svg>
               </div>
               <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
               <p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p>
             </li>
             <li class="testimonial__slider-item">
               <div class="testimonial__img-wrap">
-                <picture>
-                  <source srcset="../assets/img/testimonial-ava1.webp" type="image/webp"/><img class="testimonial__img" src="../assets/img/testimonial-ava1.jpg" alt="man"/>
-                </picture>
+                <svg class="testimonial__img-svg" width="100%" height="100%">
+                  <image class="testimonial__img" width="100%" height="100%" xlink:href="../assets/img/testimonial-ava1.jpg" preserveAspectRatio="xMidYMid  slice"></image>
+                </svg>
               </div>
               <h2 class="title title_theme_card testimonial__slider-title">John Doe</h2>
               <p class="text testimonial__slider-text">Ut posuere vitae nisi vitae tempor. Nullam eget congue enim. Donec porttitor dolor id dui posuere, tempus sagittis dolor posuere. Quisque euismod elit eget tellus tempus, id porta lacus tincidunt. Nam vehicula imperdiet magna, Vestibulum congue neque risus, eget dapibus elit laoreet nec.</p>
