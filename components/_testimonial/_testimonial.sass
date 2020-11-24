@@ -14,12 +14,15 @@
         position: relative
     &__slider-item
         +flex($jc: null, $ai: center, $dir: column, $wrap: null, $disp: flex)
+    &__img-svg
+        position: absolute
     &__img-wrap
         margin-bottom: 1.875rem
         width: 8.125rem
         height: 9.375rem
-        clip-path: polygon(50% 0, 100% 25.3%, 100% 74.7%, 50% 100%, 0 74.7%, 0 25.3%)
+        // clip-path: polygon(50% 0, 100% 25.3%, 100% 74.7%, 50% 100%, 0 74.7%, 0 25.3%)
     &__img
+        clip-path: url(#testimonial__clip-mask)
         +img-cover
     &__slider-title
         margin-bottom: 0.85rem
