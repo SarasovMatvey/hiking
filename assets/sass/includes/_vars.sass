@@ -6,7 +6,10 @@
 // And finally use $c-dark-0-rgb to tune color
     
 :root
-    --c-brand: #d5423a
+    // #d5423a
+    $c-brand-rgb: 213,66,58
+    --c-brand: rgb(#{$c-brand-rgb})
+    --c-brand-tr: #{$c-brand-rgb}
     --c-brand-darker: #b12c25
     // #000
     $c-dark-0-rgb: 0, 0, 0

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 :root {
-  --c-brand: #d5423a;
+  --c-brand: rgb(213, 66, 58);
+  --c-brand-tr: 213, 66, 58;
   --c-brand-darker: #b12c25;
   --c-dark-0: rgb(0, 0, 0);
   --c-dark-0-tr: 0, 0, 0;
@@ -94,6 +95,7 @@
 
 *, *:before, *:after {
   box-sizing: border-box;
+  outline: none;
 }
 
 html, body {
@@ -3284,6 +3286,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   text-align: left;
   padding: 2.1875rem 2.5rem 1.15rem;
   background: rgba(var(--c-dark-0-tr), 0.8);
+  isolation: isolate;
   overflow: hidden;
 }
 .events__card-title {
@@ -3319,14 +3322,24 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   height: 5.4375rem;
   border: none;
   background: var(--c-brand);
+  mix-blend-mode: difference;
   border-radius: 50%;
   color: var(--c-light);
   cursor: pointer;
+  transition: 0.1s;
+}
+.events__btn:hover {
+  width: 6rem;
+  height: 6rem;
+}
+.events__btn:active {
+  width: 5.4375rem;
+  height: 5.4375rem;
 }
 .events__btn-icon {
   position: absolute;
-  left: 25%;
-  top: 28%;
+  left: calc(50% - 0.9375rem);
+  top: calc(50% - 0.9375rem);
 }
 .events .icon-plus {
   font-size: 1.125rem;

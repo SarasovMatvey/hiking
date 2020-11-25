@@ -41,6 +41,7 @@
         text-align: left
         padding: 2.1875rem 2.5rem 1.15rem
         background: #{'rgba(var(--c-dark-0-tr), 0.8)'}
+        isolation: isolate
         overflow: hidden
     &__card-title
         margin-bottom: 1.2625rem
@@ -67,12 +68,21 @@
         border: none
         // TODO сделать прозрачным
         background: var(--c-brand)
+        // background: rgba(var(--c-brand-tr), 0.4)
+        mix-blend-mode: difference
         border-radius: 50%
         color: var(--c-light)
         cursor: pointer
+        transition: 0.1s
+        &:hover
+            width: 6rem
+            height: 6rem
+        &:active
+            width: 5.4375rem
+            height: 5.4375rem
     &__btn-icon
         position: absolute
-        left: 25%
-        top: 28%
+        left: calc(50% - 0.9375rem)
+        top: calc(50% - 0.9375rem)
     .icon-plus
         font-size: 1.125rem
