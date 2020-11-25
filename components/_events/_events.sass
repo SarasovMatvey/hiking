@@ -86,3 +86,40 @@
         top: calc(50% - 0.9375rem)
     .icon-plus
         font-size: 1.125rem
+    &__card-modal
+        +flex($jc: null, $ai: null, $dir: null, $wrap: null, $disp: flex)
+        background: #000
+        position: fixed
+        z-index: 2
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 80%
+        min-height: 60%
+    &__modal-img-wrap
+        flex-basis: 40%
+        flex-shrink: 0
+    &__modal-img
+        +img-cover
+    &__modal-content
+        position: relative
+        font-family: 'Lato'
+        padding: 1.9rem
+        flex-basis: 60%
+        flex-shrink: 0
+        text-align: left
+        color: var(--c-light)
+    &__modal-title
+        font-size: 3rem
+        margin-bottom: 4rem
+    &__modal-text
+        font-size: 1.1rem
+        line-height: 1.6
+    &__modal-dismiss
+        position: absolute
+        right: 1.9rem
+        top: 1.9rem
+        display: inline-block
+        color: var(--c-light)
+        font-size: 2rem
+        transform: rotate(45deg)

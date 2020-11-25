@@ -4,6 +4,7 @@
   "description": "---",
   "main": "index.js",
   "dependencies": {
+    "magnific-popup": "^1.1.0",
     "owl.carousel": "^2.3.4",
     "wow.js": "^1.2.2"
   },

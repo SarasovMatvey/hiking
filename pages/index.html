@@ -2789,6 +2789,421 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-name: rollOut;
 }
 
+/* Magnific Popup CSS */
+.mfp-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1042;
+  overflow: hidden;
+  position: fixed;
+  background: #0b0b0b;
+  opacity: 0.8;
+}
+
+.mfp-wrap {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1043;
+  position: fixed;
+  outline: none !important;
+  -webkit-backface-visibility: hidden;
+}
+
+.mfp-container {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.mfp-container:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.mfp-align-top .mfp-container:before {
+  display: none;
+}
+
+.mfp-content {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: left;
+  z-index: 1045;
+}
+
+.mfp-inline-holder .mfp-content,
+.mfp-ajax-holder .mfp-content {
+  width: 100%;
+  cursor: auto;
+}
+
+.mfp-ajax-cur {
+  cursor: progress;
+}
+
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: -moz-zoom-out;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.mfp-zoom {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+}
+
+.mfp-auto-cursor .mfp-content {
+  cursor: auto;
+}
+
+.mfp-close,
+.mfp-arrow,
+.mfp-preloader,
+.mfp-counter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.mfp-loading.mfp-figure {
+  display: none;
+}
+
+.mfp-hide {
+  display: none !important;
+}
+
+.mfp-preloader {
+  color: #CCC;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  text-align: center;
+  margin-top: -0.8em;
+  left: 8px;
+  right: 8px;
+  z-index: 1044;
+}
+.mfp-preloader a {
+  color: #CCC;
+}
+.mfp-preloader a:hover {
+  color: #FFF;
+}
+
+.mfp-s-ready .mfp-preloader {
+  display: none;
+}
+
+.mfp-s-error .mfp-content {
+  display: none;
+}
+
+button.mfp-close, button.mfp-arrow {
+  overflow: visible;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  display: block;
+  outline: none;
+  padding: 0;
+  z-index: 1046;
+  box-shadow: none;
+  touch-action: manipulation;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.mfp-close {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.65;
+  padding: 0 0 18px 10px;
+  color: #FFF;
+  font-style: normal;
+  font-size: 28px;
+  font-family: Arial, Baskerville, monospace;
+}
+.mfp-close:hover, .mfp-close:focus {
+  opacity: 1;
+}
+.mfp-close:active {
+  top: 1px;
+}
+
+.mfp-close-btn-in .mfp-close {
+  color: #333;
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+  color: #FFF;
+  right: -6px;
+  text-align: right;
+  padding-right: 6px;
+  width: 100%;
+}
+
+.mfp-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #CCC;
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.mfp-arrow {
+  position: absolute;
+  opacity: 0.65;
+  margin: 0;
+  top: 50%;
+  margin-top: -55px;
+  padding: 0;
+  width: 90px;
+  height: 110px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.mfp-arrow:active {
+  margin-top: -54px;
+}
+.mfp-arrow:hover, .mfp-arrow:focus {
+  opacity: 1;
+}
+.mfp-arrow:before, .mfp-arrow:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 35px;
+  margin-left: 35px;
+  border: medium inset transparent;
+}
+.mfp-arrow:after {
+  border-top-width: 13px;
+  border-bottom-width: 13px;
+  top: 8px;
+}
+.mfp-arrow:before {
+  border-top-width: 21px;
+  border-bottom-width: 21px;
+  opacity: 0.7;
+}
+
+.mfp-arrow-left {
+  left: 0;
+}
+.mfp-arrow-left:after {
+  border-right: 17px solid #FFF;
+  margin-left: 31px;
+}
+.mfp-arrow-left:before {
+  margin-left: 25px;
+  border-right: 27px solid #3F3F3F;
+}
+
+.mfp-arrow-right {
+  right: 0;
+}
+.mfp-arrow-right:after {
+  border-left: 17px solid #FFF;
+  margin-left: 39px;
+}
+.mfp-arrow-right:before {
+  border-left: 27px solid #3F3F3F;
+}
+
+.mfp-iframe-holder {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.mfp-iframe-holder .mfp-content {
+  line-height: 0;
+  width: 100%;
+  max-width: 900px;
+}
+.mfp-iframe-holder .mfp-close {
+  top: -40px;
+}
+
+.mfp-iframe-scaler {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+.mfp-iframe-scaler iframe {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  background: #000;
+}
+
+/* Main image in popup */
+img.mfp-img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  line-height: 0;
+  box-sizing: border-box;
+  padding: 40px 0 40px;
+  margin: 0 auto;
+}
+
+/* The shadow behind the image */
+.mfp-figure {
+  line-height: 0;
+}
+.mfp-figure:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 40px;
+  bottom: 40px;
+  display: block;
+  right: 0;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  background: #444;
+}
+.mfp-figure small {
+  color: #BDBDBD;
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+}
+.mfp-figure figure {
+  margin: 0;
+}
+
+.mfp-bottom-bar {
+  margin-top: -36px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  cursor: auto;
+}
+
+.mfp-title {
+  text-align: left;
+  line-height: 18px;
+  color: #F3F3F3;
+  word-wrap: break-word;
+  padding-right: 36px;
+}
+
+.mfp-image-holder .mfp-content {
+  max-width: 100%;
+}
+
+.mfp-gallery .mfp-image-holder .mfp-figure {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+  /**
+   * Remove all paddings around the image on small screen
+   */
+  .mfp-img-mobile .mfp-image-holder {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .mfp-img-mobile img.mfp-img {
+    padding: 0;
+  }
+  .mfp-img-mobile .mfp-figure:after {
+    top: 0;
+    bottom: 0;
+  }
+  .mfp-img-mobile .mfp-figure small {
+    display: inline;
+    margin-left: 5px;
+  }
+  .mfp-img-mobile .mfp-bottom-bar {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    margin: 0;
+    top: auto;
+    padding: 3px 5px;
+    position: fixed;
+    box-sizing: border-box;
+  }
+  .mfp-img-mobile .mfp-bottom-bar:empty {
+    padding: 0;
+  }
+  .mfp-img-mobile .mfp-counter {
+    right: 5px;
+    top: 3px;
+  }
+  .mfp-img-mobile .mfp-close {
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    text-align: center;
+    padding: 0;
+  }
+}
+@media all and (max-width: 900px) {
+  .mfp-arrow {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+
+  .mfp-arrow-left {
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+  }
+
+  .mfp-arrow-right {
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%;
+  }
+
+  .mfp-container {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
 .container {
   box-sizing: content-box;
   margin: 0 auto;
@@ -3126,6 +3541,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .testimonial__defs {
   position: absolute;
+  z-index: -1;
 }
 .testimonial__container {
   max-width: 46.875rem;
@@ -3351,6 +3767,52 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .events .icon-plus {
   font-size: 1.125rem;
+}
+.events__card-modal {
+  display: flex;
+  background: #000;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  min-height: 60%;
+}
+.events__modal-img-wrap {
+  flex-basis: 40%;
+  flex-shrink: 0;
+}
+.events__modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.events__modal-content {
+  position: relative;
+  font-family: "Lato";
+  padding: 1.9rem;
+  flex-basis: 60%;
+  flex-shrink: 0;
+  text-align: left;
+  color: var(--c-light);
+}
+.events__modal-title {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+.events__modal-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.events__modal-dismiss {
+  position: absolute;
+  right: 1.9rem;
+  top: 1.9rem;
+  display: inline-block;
+  color: var(--c-light);
+  font-size: 2rem;
+  transform: rotate(45deg);
 }
 
 .contact {
@@ -3604,8 +4066,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                   <li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li>
-                </ul>
-                <button class="events__btn"><i class="events__btn-icon icon-plus"></i></button>
+                </ul><a class="events__btn" href="#events__card-modal-1"><i class="events__btn-icon icon-plus"></i></a>
+              </div>
+              <div class="events__card-modal mfp-hide" id="events__card-modal-1">
+                <div class="events__modal-img-wrap">
+                  <picture>
+                    <source srcset="../assets/img/events-card-img1.webp" type="image/webp"/><img class="events__modal-img" src="../assets/img/events-card-img1.jpg" alt="black car"/>
+                  </picture>
+                </div>
+                <div class="events__modal-content">
+                  <h2 class="events__modal-title">Its simple title</h2>
+                  <p class="events__modal-text">Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?</p><a class="events__modal-dismiss" href="#"><i class="icon-plus"></i></a>
+                </div>
               </div>
             </li>
             <li class="events__card">
@@ -3620,8 +4092,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                   <li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li>
-                </ul>
-                <button class="events__btn"><i class="events__btn-icon icon-plus"></i></button>
+                </ul><a class="events__btn" href="#events__card-modal-2"><i class="events__btn-icon icon-plus"></i></a>
+              </div>
+              <div class="events__card-modal mfp-hide" id="events__card-modal-2">
+                <div class="events__modal-img-wrap">
+                  <picture>
+                    <source srcset="../assets/img/events-card-img1.webp" type="image/webp"/><img class="events__modal-img" src="../assets/img/events-card-img1.jpg" alt="black car"/>
+                  </picture>
+                </div>
+                <div class="events__modal-content">
+                  <h2 class="events__modal-title">Its simple title</h2>
+                  <p class="events__modal-text">Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?</p><a class="events__modal-dismiss" href="#"><i class="icon-plus"></i></a>
+                </div>
               </div>
             </li>
             <li class="events__card">
@@ -3636,8 +4118,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                   <li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li>
-                </ul>
-                <button class="events__btn"><i class="events__btn-icon icon-plus"></i></button>
+                </ul><a class="events__btn" href="#events__card-modal-3"><i class="events__btn-icon icon-plus"></i></a>
+              </div>
+              <div class="events__card-modal mfp-hide" id="events__card-modal-3">
+                <div class="events__modal-img-wrap">
+                  <picture>
+                    <source srcset="../assets/img/events-card-img1.webp" type="image/webp"/><img class="events__modal-img" src="../assets/img/events-card-img1.jpg" alt="black car"/>
+                  </picture>
+                </div>
+                <div class="events__modal-content">
+                  <h2 class="events__modal-title">Its simple title</h2>
+                  <p class="events__modal-text">Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?</p><a class="events__modal-dismiss" href="#"><i class="icon-plus"></i></a>
+                </div>
               </div>
             </li>
           </ul>
@@ -3675,6 +4167,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="../node_modules/wow.js/dist/wow.min.js"></script>
+    <script src="../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <script>
       document.documentElement.classList.remove("no-js");$(document).ready(function(){
     $("#slider").owlCarousel({
@@ -3686,7 +4179,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     });
   });/*! modernizr 3.6.0 (Custom Build) | MIT *
  * https://modernizr.com/download/?-backgroundblendmode-webp-setclasses !*/
- !function(e,n,t){function r(e){var n=b.className,t=Modernizr._config.classPrefix||"";if(S&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),S?b.className.baseVal=n:b.className=n)}function o(e,n){return typeof e===n}function i(){var e,n,t,r,i,a,s;for(var l in w)if(w.hasOwnProperty(l)){if(e=[],n=w[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(r=o(n.fn,"function")?n.fn():n.fn,i=0;i<e.length;i++)a=e[i],s=a.split("."),1===s.length?Modernizr[s[0]]=r:(!Modernizr[s[0]]||Modernizr[s[0]]instanceof Boolean||(Modernizr[s[0]]=new Boolean(Modernizr[s[0]])),Modernizr[s[0]][s[1]]=r),y.push((r?"":"no-")+s.join("-"))}}function a(e,n){if("object"==typeof e)for(var t in e)_(e,t)&&a(t,e[t]);else{e=e.toLowerCase();var o=e.split("."),i=Modernizr[o[0]];if(2==o.length&&(i=i[o[1]]),"undefined"!=typeof i)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),r([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}function s(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function l(e,n){return function(){return e.apply(n,arguments)}}function u(e,n,t){var r;for(var i in e)if(e[i]in n)return t===!1?e[i]:(r=n[e[i]],o(r,"function")?l(r,t||n):r);return!1}function f(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):S?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function A(e,n){return!!~(""+e).indexOf(n)}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function p(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var i=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(i){var a=i.error?"error":"log";i[a].call(i,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function c(){var e=n.body;return e||(e=f(S?"svg":"body"),e.fake=!0),e}function m(e,t,r,o){var i,a,s,l,u="modernizr",A=f("div"),d=c();if(parseInt(r,10))for(;r--;)s=f("div"),s.id=o?o[r]:u+(r+1),A.appendChild(s);return i=f("style"),i.type="text/css",i.id="s"+u,(d.fake?d:A).appendChild(i),d.appendChild(A),i.styleSheet?i.styleSheet.cssText=e:i.appendChild(n.createTextNode(e)),A.id=u,d.fake&&(d.style.background="",d.style.overflow="hidden",l=b.style.overflow,b.style.overflow="hidden",b.appendChild(d)),a=t(A,e),d.fake?(d.parentNode.removeChild(d),b.style.overflow=l,b.offsetHeight):A.parentNode.removeChild(A),!!a}function g(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(d(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var i=[];o--;)i.push("("+d(n[o])+":"+r+")");return i=i.join(" or "),m("@supports ("+i+") { #modernizr { position: absolute; } }",function(e){return"absolute"==p(e,null,"position")})}return t}function h(e,n,r,i){function a(){u&&(delete E.style,delete E.modElem)}if(i=o(i,"undefined")?!1:i,!o(r,"undefined")){var l=g(e,r);if(!o(l,"undefined"))return l}for(var u,d,p,c,m,h=["modernizr","tspan","samp"];!E.style&&h.length;)u=!0,E.modElem=f(h.shift()),E.style=E.modElem.style;for(p=e.length,d=0;p>d;d++)if(c=e[d],m=E.style[c],A(c,"-")&&(c=s(c)),E.style[c]!==t){if(i||o(r,"undefined"))return a(),"pfx"==n?c:!0;try{E.style[c]=r}catch(v){}if(E.style[c]!=m)return a(),"pfx"==n?c:!0}return a(),!1}function v(e,n,t,r,i){var a=e.charAt(0).toUpperCase()+e.slice(1),s=(e+" "+B.join(a+" ")+a).split(" ");return o(n,"string")||o(n,"undefined")?h(s,n,r,i):(s=(e+" "+U.join(a+" ")+a).split(" "),u(s,n,t))}var y=[],w=[],C={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){w.push({name:e,fn:n,options:t})},addAsyncTest:function(e){w.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=C,Modernizr=new Modernizr;var _,b=n.documentElement,S="svg"===b.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;_=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,t){return e.call(n,t)}}(),C._l={},C.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},C._trigger=function(e,n){if(this._l[e]){var t=this._l[e];setTimeout(function(){var e,r;for(e=0;e<t.length;e++)(r=t[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){C.addTest=a}),Modernizr.addAsyncTest(function(){function e(e,n,t){function r(n){var r=n&&"load"===n.type?1==o.width:!1,i="webp"===e;a(e,i&&r?new Boolean(r):r),t&&t(n)}var o=new Image;o.onerror=r,o.onload=r,o.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],t=n.shift();e(t.name,t.uri,function(t){if(t&&"load"===t.type)for(var r=0;r<n.length;r++)e(n[r].name,n[r].uri)})});var x="Moz O ms Webkit",B=C._config.usePrefixes?x.split(" "):[];C._cssomPrefixes=B;var Q=function(n){var r,o=prefixes.length,i=e.CSSRule;if("undefined"==typeof i)return t;if(!n)return!1;if(n=n.replace(/^@/,""),r=n.replace(/-/g,"_").toUpperCase()+"_RULE",r in i)return"@"+n;for(var a=0;o>a;a++){var s=prefixes[a],l=s.toUpperCase()+"_"+r;if(l in i)return"@-"+s.toLowerCase()+"-"+n}return!1};C.atRule=Q;var U=C._config.usePrefixes?x.toLowerCase().split(" "):[];C._domPrefixes=U;var R={elem:f("modernizr")};Modernizr._q.push(function(){delete R.elem});var E={style:R.elem.style};Modernizr._q.unshift(function(){delete E.style}),C.testAllProps=v;var T=C.prefixed=function(e,n,t){return 0===e.indexOf("@")?Q(e):(-1!=e.indexOf("-")&&(e=s(e)),n?v(e,n,t):v(e,"pfx"))};Modernizr.addTest("backgroundblendmode",T("backgroundBlendMode","text")),i(),r(y),delete C.addTest,delete C.addAsyncTest;for(var k=0;k<Modernizr._q.length;k++)Modernizr._q[k]();e.Modernizr=Modernizr}(window,document);new WOW().init();
+ !function(e,n,t){function r(e){var n=b.className,t=Modernizr._config.classPrefix||"";if(S&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),S?b.className.baseVal=n:b.className=n)}function o(e,n){return typeof e===n}function i(){var e,n,t,r,i,a,s;for(var l in w)if(w.hasOwnProperty(l)){if(e=[],n=w[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(r=o(n.fn,"function")?n.fn():n.fn,i=0;i<e.length;i++)a=e[i],s=a.split("."),1===s.length?Modernizr[s[0]]=r:(!Modernizr[s[0]]||Modernizr[s[0]]instanceof Boolean||(Modernizr[s[0]]=new Boolean(Modernizr[s[0]])),Modernizr[s[0]][s[1]]=r),y.push((r?"":"no-")+s.join("-"))}}function a(e,n){if("object"==typeof e)for(var t in e)_(e,t)&&a(t,e[t]);else{e=e.toLowerCase();var o=e.split("."),i=Modernizr[o[0]];if(2==o.length&&(i=i[o[1]]),"undefined"!=typeof i)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),r([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}function s(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function l(e,n){return function(){return e.apply(n,arguments)}}function u(e,n,t){var r;for(var i in e)if(e[i]in n)return t===!1?e[i]:(r=n[e[i]],o(r,"function")?l(r,t||n):r);return!1}function f(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):S?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function A(e,n){return!!~(""+e).indexOf(n)}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function p(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var i=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(i){var a=i.error?"error":"log";i[a].call(i,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function c(){var e=n.body;return e||(e=f(S?"svg":"body"),e.fake=!0),e}function m(e,t,r,o){var i,a,s,l,u="modernizr",A=f("div"),d=c();if(parseInt(r,10))for(;r--;)s=f("div"),s.id=o?o[r]:u+(r+1),A.appendChild(s);return i=f("style"),i.type="text/css",i.id="s"+u,(d.fake?d:A).appendChild(i),d.appendChild(A),i.styleSheet?i.styleSheet.cssText=e:i.appendChild(n.createTextNode(e)),A.id=u,d.fake&&(d.style.background="",d.style.overflow="hidden",l=b.style.overflow,b.style.overflow="hidden",b.appendChild(d)),a=t(A,e),d.fake?(d.parentNode.removeChild(d),b.style.overflow=l,b.offsetHeight):A.parentNode.removeChild(A),!!a}function g(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(d(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var i=[];o--;)i.push("("+d(n[o])+":"+r+")");return i=i.join(" or "),m("@supports ("+i+") { #modernizr { position: absolute; } }",function(e){return"absolute"==p(e,null,"position")})}return t}function h(e,n,r,i){function a(){u&&(delete E.style,delete E.modElem)}if(i=o(i,"undefined")?!1:i,!o(r,"undefined")){var l=g(e,r);if(!o(l,"undefined"))return l}for(var u,d,p,c,m,h=["modernizr","tspan","samp"];!E.style&&h.length;)u=!0,E.modElem=f(h.shift()),E.style=E.modElem.style;for(p=e.length,d=0;p>d;d++)if(c=e[d],m=E.style[c],A(c,"-")&&(c=s(c)),E.style[c]!==t){if(i||o(r,"undefined"))return a(),"pfx"==n?c:!0;try{E.style[c]=r}catch(v){}if(E.style[c]!=m)return a(),"pfx"==n?c:!0}return a(),!1}function v(e,n,t,r,i){var a=e.charAt(0).toUpperCase()+e.slice(1),s=(e+" "+B.join(a+" ")+a).split(" ");return o(n,"string")||o(n,"undefined")?h(s,n,r,i):(s=(e+" "+U.join(a+" ")+a).split(" "),u(s,n,t))}var y=[],w=[],C={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){w.push({name:e,fn:n,options:t})},addAsyncTest:function(e){w.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=C,Modernizr=new Modernizr;var _,b=n.documentElement,S="svg"===b.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;_=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,t){return e.call(n,t)}}(),C._l={},C.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},C._trigger=function(e,n){if(this._l[e]){var t=this._l[e];setTimeout(function(){var e,r;for(e=0;e<t.length;e++)(r=t[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){C.addTest=a}),Modernizr.addAsyncTest(function(){function e(e,n,t){function r(n){var r=n&&"load"===n.type?1==o.width:!1,i="webp"===e;a(e,i&&r?new Boolean(r):r),t&&t(n)}var o=new Image;o.onerror=r,o.onload=r,o.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],t=n.shift();e(t.name,t.uri,function(t){if(t&&"load"===t.type)for(var r=0;r<n.length;r++)e(n[r].name,n[r].uri)})});var x="Moz O ms Webkit",B=C._config.usePrefixes?x.split(" "):[];C._cssomPrefixes=B;var Q=function(n){var r,o=prefixes.length,i=e.CSSRule;if("undefined"==typeof i)return t;if(!n)return!1;if(n=n.replace(/^@/,""),r=n.replace(/-/g,"_").toUpperCase()+"_RULE",r in i)return"@"+n;for(var a=0;o>a;a++){var s=prefixes[a],l=s.toUpperCase()+"_"+r;if(l in i)return"@-"+s.toLowerCase()+"-"+n}return!1};C.atRule=Q;var U=C._config.usePrefixes?x.toLowerCase().split(" "):[];C._domPrefixes=U;var R={elem:f("modernizr")};Modernizr._q.push(function(){delete R.elem});var E={style:R.elem.style};Modernizr._q.unshift(function(){delete E.style}),C.testAllProps=v;var T=C.prefixed=function(e,n,t){return 0===e.indexOf("@")?Q(e):(-1!=e.indexOf("-")&&(e=s(e)),n?v(e,n,t):v(e,"pfx"))};Modernizr.addTest("backgroundblendmode",T("backgroundBlendMode","text")),i(),r(y),delete C.addTest,delete C.addAsyncTest;for(var k=0;k<Modernizr._q.length;k++)Modernizr._q[k]();e.Modernizr=Modernizr}(window,document);new WOW().init();$(function () {
+	$('.events__btn').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		focus: '#username',
+		modal: true
+	});
+	$(document).on('click', '.events__modal-dismiss', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+});
     </script>
   </body>
 </html>
