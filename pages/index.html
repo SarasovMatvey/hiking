@@ -103,7 +103,6 @@
 
 *, *:before, *:after {
   box-sizing: border-box;
-  outline: none;
 }
 
 html, body {
@@ -3770,7 +3769,6 @@ img.mfp-img {
 }
 .events__card-modal {
   display: flex;
-  background: #000;
   position: fixed;
   z-index: 2;
   left: 50%;
@@ -3782,6 +3780,16 @@ img.mfp-img {
 .events__modal-img-wrap {
   flex-basis: 40%;
   flex-shrink: 0;
+}
+@media screen and (max-width: 1030px) {
+  .events__modal-img-wrap {
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 .events__modal-img {
   width: 100%;
@@ -3796,22 +3804,34 @@ img.mfp-img {
   flex-shrink: 0;
   text-align: left;
   color: var(--c-light);
+  background: var(--c-dark-0);
+}
+@media screen and (max-width: 1030px) {
+  .events__modal-content {
+    flex-basis: 100%;
+    background: rgba(var(--c-dark-0-tr), 0.9);
+  }
+}
+.events__modal-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
 }
 .events__modal-title {
   font-size: 3rem;
-  margin-bottom: 4rem;
+  margin-right: 2rem;
 }
 .events__modal-text {
   font-size: 1.1rem;
   line-height: 1.6;
 }
 .events__modal-dismiss {
-  position: absolute;
-  right: 1.9rem;
-  top: 1.9rem;
   display: inline-block;
   color: var(--c-light);
   font-size: 2rem;
+}
+.events__modal-dismiss-icon {
+  display: inline-block;
   transform: rotate(45deg);
 }
 
@@ -4066,7 +4086,8 @@ img.mfp-img {
                   <li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li>
-                </ul><a class="events__btn" href="#events__card-modal-1"><i class="events__btn-icon icon-plus"></i></a>
+                </ul>
+                <div class="events__btn" href="#events__card-modal-1"><i class="events__btn-icon icon-plus"></i></div>
               </div>
               <div class="events__card-modal mfp-hide" id="events__card-modal-1">
                 <div class="events__modal-img-wrap">
@@ -4075,8 +4096,10 @@ img.mfp-img {
                   </picture>
                 </div>
                 <div class="events__modal-content">
-                  <h2 class="events__modal-title">Its simple title</h2>
-                  <p class="events__modal-text">Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?</p><a class="events__modal-dismiss" href="#"><i class="icon-plus"></i></a>
+                  <div class="events__modal-row">
+                    <h2 class="events__modal-title">Its simple title</h2><a class="events__modal-dismiss" href="#"><i class="icon-plus events__modal-dismiss-icon"></i></a>
+                  </div>
+                  <p class="events__modal-text">Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?</p>
                 </div>
               </div>
             </li>
@@ -4092,17 +4115,20 @@ img.mfp-img {
                   <li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li>
-                </ul><a class="events__btn" href="#events__card-modal-2"><i class="events__btn-icon icon-plus"></i></a>
+                </ul>
+                <div class="events__btn" href="#events__card-modal-2"><i class="events__btn-icon icon-plus"></i></div>
               </div>
               <div class="events__card-modal mfp-hide" id="events__card-modal-2">
                 <div class="events__modal-img-wrap">
                   <picture>
-                    <source srcset="../assets/img/events-card-img1.webp" type="image/webp"/><img class="events__modal-img" src="../assets/img/events-card-img1.jpg" alt="black car"/>
+                    <source srcset="../assets/img/events-card-img2.webp" type="image/webp"/><img class="events__modal-img" src="../assets/img/events-card-img2.jpg" alt="black car"/>
                   </picture>
                 </div>
                 <div class="events__modal-content">
-                  <h2 class="events__modal-title">Its simple title</h2>
-                  <p class="events__modal-text">Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?</p><a class="events__modal-dismiss" href="#"><i class="icon-plus"></i></a>
+                  <div class="events__modal-row">
+                    <h2 class="events__modal-title">Its simple title</h2><a class="events__modal-dismiss" href="#"><i class="icon-plus events__modal-dismiss-icon"></i></a>
+                  </div>
+                  <p class="events__modal-text">Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?</p>
                 </div>
               </div>
             </li>
@@ -4118,17 +4144,20 @@ img.mfp-img {
                   <li class="events__card-punct"><i class="events__card-icon icon-calendar"></i>15 Dec 2017 - 25 Dec 2017</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-map-marker"></i>Bago Yoma Forest</li>
                   <li class="events__card-punct"><i class="events__card-icon icon-group"></i>10 People</li>
-                </ul><a class="events__btn" href="#events__card-modal-3"><i class="events__btn-icon icon-plus"></i></a>
+                </ul>
+                <div class="events__btn" href="#events__card-modal-3"><i class="events__btn-icon icon-plus"></i></div>
               </div>
               <div class="events__card-modal mfp-hide" id="events__card-modal-3">
                 <div class="events__modal-img-wrap">
                   <picture>
-                    <source srcset="../assets/img/events-card-img1.webp" type="image/webp"/><img class="events__modal-img" src="../assets/img/events-card-img1.jpg" alt="black car"/>
+                    <source srcset="../assets/img/events-card-img3.webp" type="image/webp"/><img class="events__modal-img" src="../assets/img/events-card-img3.jpg" alt="black car"/>
                   </picture>
                 </div>
                 <div class="events__modal-content">
-                  <h2 class="events__modal-title">Its simple title</h2>
-                  <p class="events__modal-text">Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?</p><a class="events__modal-dismiss" href="#"><i class="icon-plus"></i></a>
+                  <div class="events__modal-row">
+                    <h2 class="events__modal-title">Its simple title</h2><a class="events__modal-dismiss" href="#"><i class="icon-plus events__modal-dismiss-icon"></i></a>
+                  </div>
+                  <p class="events__modal-text">Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?</p>
                 </div>
               </div>
             </li>
@@ -4182,9 +4211,10 @@ img.mfp-img {
  !function(e,n,t){function r(e){var n=b.className,t=Modernizr._config.classPrefix||"";if(S&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),S?b.className.baseVal=n:b.className=n)}function o(e,n){return typeof e===n}function i(){var e,n,t,r,i,a,s;for(var l in w)if(w.hasOwnProperty(l)){if(e=[],n=w[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(r=o(n.fn,"function")?n.fn():n.fn,i=0;i<e.length;i++)a=e[i],s=a.split("."),1===s.length?Modernizr[s[0]]=r:(!Modernizr[s[0]]||Modernizr[s[0]]instanceof Boolean||(Modernizr[s[0]]=new Boolean(Modernizr[s[0]])),Modernizr[s[0]][s[1]]=r),y.push((r?"":"no-")+s.join("-"))}}function a(e,n){if("object"==typeof e)for(var t in e)_(e,t)&&a(t,e[t]);else{e=e.toLowerCase();var o=e.split("."),i=Modernizr[o[0]];if(2==o.length&&(i=i[o[1]]),"undefined"!=typeof i)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),r([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}function s(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function l(e,n){return function(){return e.apply(n,arguments)}}function u(e,n,t){var r;for(var i in e)if(e[i]in n)return t===!1?e[i]:(r=n[e[i]],o(r,"function")?l(r,t||n):r);return!1}function f(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):S?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function A(e,n){return!!~(""+e).indexOf(n)}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function p(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var i=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(i){var a=i.error?"error":"log";i[a].call(i,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function c(){var e=n.body;return e||(e=f(S?"svg":"body"),e.fake=!0),e}function m(e,t,r,o){var i,a,s,l,u="modernizr",A=f("div"),d=c();if(parseInt(r,10))for(;r--;)s=f("div"),s.id=o?o[r]:u+(r+1),A.appendChild(s);return i=f("style"),i.type="text/css",i.id="s"+u,(d.fake?d:A).appendChild(i),d.appendChild(A),i.styleSheet?i.styleSheet.cssText=e:i.appendChild(n.createTextNode(e)),A.id=u,d.fake&&(d.style.background="",d.style.overflow="hidden",l=b.style.overflow,b.style.overflow="hidden",b.appendChild(d)),a=t(A,e),d.fake?(d.parentNode.removeChild(d),b.style.overflow=l,b.offsetHeight):A.parentNode.removeChild(A),!!a}function g(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(d(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var i=[];o--;)i.push("("+d(n[o])+":"+r+")");return i=i.join(" or "),m("@supports ("+i+") { #modernizr { position: absolute; } }",function(e){return"absolute"==p(e,null,"position")})}return t}function h(e,n,r,i){function a(){u&&(delete E.style,delete E.modElem)}if(i=o(i,"undefined")?!1:i,!o(r,"undefined")){var l=g(e,r);if(!o(l,"undefined"))return l}for(var u,d,p,c,m,h=["modernizr","tspan","samp"];!E.style&&h.length;)u=!0,E.modElem=f(h.shift()),E.style=E.modElem.style;for(p=e.length,d=0;p>d;d++)if(c=e[d],m=E.style[c],A(c,"-")&&(c=s(c)),E.style[c]!==t){if(i||o(r,"undefined"))return a(),"pfx"==n?c:!0;try{E.style[c]=r}catch(v){}if(E.style[c]!=m)return a(),"pfx"==n?c:!0}return a(),!1}function v(e,n,t,r,i){var a=e.charAt(0).toUpperCase()+e.slice(1),s=(e+" "+B.join(a+" ")+a).split(" ");return o(n,"string")||o(n,"undefined")?h(s,n,r,i):(s=(e+" "+U.join(a+" ")+a).split(" "),u(s,n,t))}var y=[],w=[],C={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){w.push({name:e,fn:n,options:t})},addAsyncTest:function(e){w.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=C,Modernizr=new Modernizr;var _,b=n.documentElement,S="svg"===b.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;_=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,t){return e.call(n,t)}}(),C._l={},C.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},C._trigger=function(e,n){if(this._l[e]){var t=this._l[e];setTimeout(function(){var e,r;for(e=0;e<t.length;e++)(r=t[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){C.addTest=a}),Modernizr.addAsyncTest(function(){function e(e,n,t){function r(n){var r=n&&"load"===n.type?1==o.width:!1,i="webp"===e;a(e,i&&r?new Boolean(r):r),t&&t(n)}var o=new Image;o.onerror=r,o.onload=r,o.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],t=n.shift();e(t.name,t.uri,function(t){if(t&&"load"===t.type)for(var r=0;r<n.length;r++)e(n[r].name,n[r].uri)})});var x="Moz O ms Webkit",B=C._config.usePrefixes?x.split(" "):[];C._cssomPrefixes=B;var Q=function(n){var r,o=prefixes.length,i=e.CSSRule;if("undefined"==typeof i)return t;if(!n)return!1;if(n=n.replace(/^@/,""),r=n.replace(/-/g,"_").toUpperCase()+"_RULE",r in i)return"@"+n;for(var a=0;o>a;a++){var s=prefixes[a],l=s.toUpperCase()+"_"+r;if(l in i)return"@-"+s.toLowerCase()+"-"+n}return!1};C.atRule=Q;var U=C._config.usePrefixes?x.toLowerCase().split(" "):[];C._domPrefixes=U;var R={elem:f("modernizr")};Modernizr._q.push(function(){delete R.elem});var E={style:R.elem.style};Modernizr._q.unshift(function(){delete E.style}),C.testAllProps=v;var T=C.prefixed=function(e,n,t){return 0===e.indexOf("@")?Q(e):(-1!=e.indexOf("-")&&(e=s(e)),n?v(e,n,t):v(e,"pfx"))};Modernizr.addTest("backgroundblendmode",T("backgroundBlendMode","text")),i(),r(y),delete C.addTest,delete C.addAsyncTest;for(var k=0;k<Modernizr._q.length;k++)Modernizr._q[k]();e.Modernizr=Modernizr}(window,document);new WOW().init();$(function () {
 	$('.events__btn').magnificPopup({
 		type: 'inline',
+		showCloseBtn: false,
 		preloader: false,
 		focus: '#username',
-		modal: true
+		closeOnBgClick: true
 	});
 	$(document).on('click', '.events__modal-dismiss', function (e) {
 		e.preventDefault();

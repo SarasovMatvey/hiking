@@ -95,7 +95,6 @@
 
 *, *:before, *:after {
   box-sizing: border-box;
-  outline: none;
 }
 
 html, body {
@@ -3762,7 +3761,6 @@ img.mfp-img {
 }
 .events__card-modal {
   display: flex;
-  background: #000;
   position: fixed;
   z-index: 2;
   left: 50%;
@@ -3774,6 +3772,16 @@ img.mfp-img {
 .events__modal-img-wrap {
   flex-basis: 40%;
   flex-shrink: 0;
+}
+@media screen and (max-width: 1030px) {
+  .events__modal-img-wrap {
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 .events__modal-img {
   width: 100%;
@@ -3788,22 +3796,34 @@ img.mfp-img {
   flex-shrink: 0;
   text-align: left;
   color: var(--c-light);
+  background: var(--c-dark-0);
+}
+@media screen and (max-width: 1030px) {
+  .events__modal-content {
+    flex-basis: 100%;
+    background: rgba(var(--c-dark-0-tr), 0.9);
+  }
+}
+.events__modal-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
 }
 .events__modal-title {
   font-size: 3rem;
-  margin-bottom: 4rem;
+  margin-right: 2rem;
 }
 .events__modal-text {
   font-size: 1.1rem;
   line-height: 1.6;
 }
 .events__modal-dismiss {
-  position: absolute;
-  right: 1.9rem;
-  top: 1.9rem;
   display: inline-block;
   color: var(--c-light);
   font-size: 2rem;
+}
+.events__modal-dismiss-icon {
+  display: inline-block;
   transform: rotate(45deg);
 }
 

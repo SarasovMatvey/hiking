@@ -21,7 +21,7 @@ mixin events(data)
                             li.events__card-punct
                                 i.events__card-icon.icon-group
                                 | 10 People
-                        a.events__btn(href="#events__card-modal-1")
+                        div.events__btn(href="#events__card-modal-1")
                             i.events__btn-icon.icon-plus
                     .events__card-modal.mfp-hide#events__card-modal-1
                         .events__modal-img-wrap
@@ -29,10 +29,11 @@ mixin events(data)
                                 source(srcset="../assets/img/events-card-img1.webp", type="image/webp")
                                 img.events__modal-img(src="../assets/img/events-card-img1.jpg", alt="black car")
                         .events__modal-content
-                            h2.events__modal-title Its simple title
+                            .events__modal-row
+                                        h2.events__modal-title Its simple title
+                                        a.events__modal-dismiss(href="#"): i.icon-plus.events__modal-dismiss-icon
                             p.events__modal-text.
                                 Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?
-                            a.events__modal-dismiss(href="#"): i.icon-plus
                 li.events__card
                     .events__img-wrap
                         picture
@@ -50,18 +51,19 @@ mixin events(data)
                             li.events__card-punct
                                 i.events__card-icon.icon-group
                                 | 10 People
-                        a.events__btn(href="#events__card-modal-2")
+                        div.events__btn(href="#events__card-modal-2")
                             i.events__btn-icon.icon-plus
                     .events__card-modal.mfp-hide#events__card-modal-2
                         .events__modal-img-wrap
                             picture
-                                source(srcset="../assets/img/events-card-img1.webp", type="image/webp")
-                                img.events__modal-img(src="../assets/img/events-card-img1.jpg", alt="black car")
+                                source(srcset="../assets/img/events-card-img2.webp", type="image/webp")
+                                img.events__modal-img(src="../assets/img/events-card-img2.jpg", alt="black car")
                         .events__modal-content
-                            h2.events__modal-title Its simple title
+                            .events__modal-row
+                                    h2.events__modal-title Its simple title
+                                    a.events__modal-dismiss(href="#"): i.icon-plus.events__modal-dismiss-icon
                             p.events__modal-text.
                                 Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?
-                            a.events__modal-dismiss(href="#"): i.icon-plus
                 li.events__card
                     .events__img-wrap
                         picture
@@ -79,15 +81,16 @@ mixin events(data)
                             li.events__card-punct
                                 i.events__card-icon.icon-group
                                 | 10 People
-                        a.events__btn(href="#events__card-modal-3")
+                        div.events__btn(href="#events__card-modal-3")
                             i.events__btn-icon.icon-plus
                     .events__card-modal.mfp-hide#events__card-modal-3
                         .events__modal-img-wrap
                             picture
-                                source(srcset="../assets/img/events-card-img1.webp", type="image/webp")
-                                img.events__modal-img(src="../assets/img/events-card-img1.jpg", alt="black car")
+                                source(srcset="../assets/img/events-card-img3.webp", type="image/webp")
+                                img.events__modal-img(src="../assets/img/events-card-img3.jpg", alt="black car")
                         .events__modal-content
-                            h2.events__modal-title Its simple title
+                            .events__modal-row
+                                h2.events__modal-title Its simple title
+                                a.events__modal-dismiss(href="#"): i.icon-plus.events__modal-dismiss-icon
                             p.events__modal-text.
                                 Lorem ipsum dolor sit amet consb ectetur, adipisicing elit. Laudantium nemo in nostrum quisquam impedit sequi ab quo quasi omnis repudiandae, modi pariatur quidem officiis, cupiditate excepturi iure ex tenetur, doloremque nobis. Animi, minima eaque reiciendis ipsa maiores velit nulla blanditiis voluptate. Cupiditate laudantium quidem reiciendis velit sed. Voluptates ullam iure corporis quis blanditiis eligendi temporibus, repellendus distinctio animi consequatur dolore?
-                            a.events__modal-dismiss(href="#"): i.icon-plus
