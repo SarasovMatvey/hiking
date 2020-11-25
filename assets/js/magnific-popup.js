@@ -4,7 +4,8 @@ $(function () {
 		showCloseBtn: false,
 		preloader: false,
 		focus: '#username',
-		closeOnBgClick: true
+		closeOnBgClick: true,
+		mainClass: 'mfp-fade'
 	});
 	$(document).on('click', '.events__modal-dismiss', function (e) {
 		e.preventDefault();

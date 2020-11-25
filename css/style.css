@@ -163,6 +163,15 @@ table {
   border-spacing: 0;
 }
 
+.mfp-fade {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.mfp-fade.mfp-ready {
+  opacity: 1;
+}
+
 /*
  *  Owl Carousel - Core
  */
@@ -3563,6 +3572,7 @@ img.mfp-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  font-family: "object-fit: cover";
 }
 .testimonial__slider-title {
   margin-bottom: 0.85rem;
@@ -3695,6 +3705,7 @@ img.mfp-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  font-family: "object-fit: cover";
 }
 .events__card-content {
   position: relative;
@@ -3787,6 +3798,7 @@ img.mfp-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  font-family: "object-fit: cover";
 }
 .events__modal-content {
   position: relative;
