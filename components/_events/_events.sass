@@ -50,8 +50,9 @@
         +flex($jc: null, $ai: center, $dir: null, $wrap: null, $disp: flex)
         margin-bottom: 0.625rem
         font-family: "Source Sans Pro"
-    &__card-icon
-        margin-right: 0.625rem
+    &__card-icon-wrap
+        display: inline-block
+        width: 1.4375rem
     .icon-calendar
         font-size: 0.8375rem
     .icon-map-marker
@@ -117,6 +118,7 @@
         text-align: left
         color: var(--c-light)
         background: var(--c-dark-0)
+        overflow-y: auto
         +media(1030px)
             position: absolute
             left: 0

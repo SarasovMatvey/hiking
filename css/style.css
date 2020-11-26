@@ -172,6 +172,10 @@ table {
   opacity: 1;
 }
 
+.mfp-bg {
+  background: rgba(var(--c-dark-0-tr), 0.8) !important;
+}
+
 /*
  *  Owl Carousel - Core
  */
@@ -3726,8 +3730,9 @@ img.mfp-img {
   margin-bottom: 0.625rem;
   font-family: "Source Sans Pro";
 }
-.events__card-icon {
-  margin-right: 0.625rem;
+.events__card-icon-wrap {
+  display: inline-block;
+  width: 1.4375rem;
 }
 .events .icon-calendar {
   font-size: 0.8375rem;
@@ -3811,6 +3816,7 @@ img.mfp-img {
   text-align: left;
   color: var(--c-light);
   background: var(--c-dark-0);
+  overflow-y: auto;
 }
 @media screen and (max-width: 1030px) {
   .events__modal-content {
@@ -3906,7 +3912,7 @@ img.mfp-img {
   resize: none;
   line-height: normal;
   height: 2.425rem;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .footer {
