@@ -22,30 +22,35 @@
   src: local("Lato Black"), local("Lato-Black"), url("../assets/fonts/Lato/Lato-Black/lato-black-webfont.woff2") format("woff2"), url("../assets/fonts/Lato/Lato-Black/lato-black-webfont.woff") format("woff");
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Lato";
   src: local("Lato Bold"), local("Lato-Bold"), url("../assets/fonts/Lato/Lato-Bold/lato-bold-webfont.woff2") format("woff2"), url("../assets/fonts/Lato/Lato-Bold/lato-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Lato";
   src: local("Lato Light"), local("Lato-Light"), url("../assets/fonts/Lato/Lato-Light/lato-light-webfont.woff2") format("woff2"), url("../assets/fonts/Lato/Lato-Light/lato-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Pt Sans";
   src: local("PT Sans Bold"), local("PTSans-Bold"), url("../assets/fonts/PTSans/PTSans-Bold/ptsans-bold-webfont.woff2") format("woff2"), url("../assets/fonts/PTSans/PTSans-Bold/ptsans-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Source Sans Pro";
   src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url("../assets/fonts/SourceSansPro/SourceSansPro-Regular/sourcesanspro-regular-webfont.woff2") format("woff2"), url("../assets/fonts/SourceSansPro/SourceSansPro-Regular/sourcesanspro-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "icomoon";
@@ -173,7 +178,7 @@ table {
 }
 
 .mfp-bg {
-  background: rgba(var(--c-dark-0-tr), 0.8) !important;
+  background: rgba(var(--c-dark-0-tr), 0.95) !important;
 }
 
 /*
@@ -3339,11 +3344,26 @@ img.mfp-img {
 .webp .hero {
   background: url(../assets/img/header-bg.webp) center/cover no-repeat;
 }
+@media screen and (max-width: 700px) {
+  .webp .hero {
+    background: url(../assets/img/header-bg-mobile.webp) center/cover no-repeat;
+  }
+}
 .no-webp .hero {
   background: url(../assets/img/header-bg.jpg) center/cover no-repeat;
 }
+@media screen and (max-width: 700px) {
+  .no-webp .hero {
+    background: url(../assets/img/header-bg-mobile.jpg) center/cover no-repeat;
+  }
+}
 .no-js .hero {
   background: url(../assets/img/header-bg.jpg) center/cover no-repeat;
+}
+@media screen and (max-width: 700px) {
+  .no-js .hero {
+    background: url(../assets/img/header-bg-mobile.jpg) center/cover no-repeat;
+  }
 }
 .hero__container {
   max-width: 68rem;
@@ -3662,14 +3682,34 @@ img.mfp-img {
 .webp .events {
   background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.webp") center/cover no-repeat;
 }
+@media screen and (max-width: 700px) {
+  .webp .events {
+    background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url(../assets/img/events-bg-mobile.webp) center/cover no-repeat;
+  }
+}
 .no-webp .events {
   background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.jpg") center/cover no-repeat;
+}
+@media screen and (max-width: 700px) {
+  .no-webp .events {
+    background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url(../assets/img/events-bg-mobile.jpg) center/cover no-repeat;
+  }
 }
 .no-js .events {
   background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url("../assets/img/events-bg.jpg") center/cover no-repeat;
 }
+@media screen and (max-width: 700px) {
+  .no-js .events {
+    background: linear-gradient(rgba(var(--c-dark-2-tr), 0.3), rgba(var(--c-dark-2-tr), 0.3)), linear-gradient(rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), linear-gradient(rgba(var(--c-dark-2-tr), 1), rgba(var(--c-dark-2-tr), 1)), url(../assets/img/events-bg-mobile.jpg) center/cover no-repeat;
+  }
+}
 .no-backgroundblendmode .events {
   background: linear-gradient(0deg, rgba(var(--c-dark-2-tr), 0.5), rgba(var(--c-dark-2-tr), 0.5)), url("../assets/img/events-bg.jpg") center/cover no-repeat;
+}
+@media screen and (max-width: 700px) {
+  .no-backgroundblendmode .events {
+    background: url(../assets/img/events-bg-mobile.jpg) center/cover no-repeat;
+  }
 }
 .events__container {
   max-width: 73.125rem;
@@ -3831,6 +3871,7 @@ img.mfp-img {
 .events__modal-row {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 4rem;
 }
 .events__modal-title {

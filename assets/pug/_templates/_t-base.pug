@@ -22,20 +22,21 @@ html.no-js(lang="en")
         link(rel="shortcut icon", href="../assets/img/favicon.ico", type="image/x-icon")
         script
             include ../../../assets/js/ie-variables.js
+            include ../../../assets/js/modernizr.js
         style
             include ../../../css/style.css
     body
         .wrapper
             block content
-        script(src="../node_modules/jquery/dist/jquery.min.js")
-        script(src="../node_modules/object-fit-images/dist/ofi.min.js")
-        script(src="../node_modules/owl.carousel/dist/owl.carousel.min.js")
-        script(src="../node_modules/wow.js/dist/wow.min.js")
-        script(src="../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js")
+        script
+            include ../../../node_modules/jquery/dist/jquery.min.js
+            include ../../../node_modules/object-fit-images/dist/ofi.min.js
+            include ../../../node_modules/owl.carousel/dist/owl.carousel.min.js
+            include ../../../node_modules/wow.js/dist/wow.min.js
+            include ../../../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js
         script
             include ../../../assets/js/base.js
             include ../../../assets/js/owl-carousel.js
-            include ../../../assets/js/modernizr.js
             include ../../../assets/js/wow.js       
             include ../../../assets/js/magnific-popup.js       
             include ../../../assets/js/ofi.js
