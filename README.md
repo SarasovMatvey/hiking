@@ -6,7 +6,8 @@
 
 1. **pug**: `pug --watch assets/pug/index.pug --out pages/` или `pug --watch --pretty assets/pug/index.pug --out pages/`
 2. **sass**: `sass --watch assets/sass/:css/`
-3. **modules**: `npm install`
+3. **sass**: `sass --watch {assets/sass,components}:css`
+4. **modules**: `npm install`
 
 ---
 

@@ -3533,6 +3533,7 @@ img.mfp-img {
   margin-bottom: 1.5625rem;
 }
 .tours__item-text {
+  width: 100%;
   max-width: 18.25rem;
   margin: 0 auto;
 }
@@ -3689,7 +3690,8 @@ img.mfp-img {
 }
 .events__card {
   margin: 0 0.875rem;
-  flex: 0 0 calc(33.333% - 1.75rem);
+  flex-shrink: 0;
+  flex-basis: calc(33.333% - 1.75rem);
   color: var(--c-light);
 }
 @media screen and (max-width: 1120px) {
@@ -3820,7 +3822,11 @@ img.mfp-img {
 }
 @media screen and (max-width: 1030px) {
   .events__modal-content {
-    flex-basis: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(var(--c-dark-0-tr), 0.9);
   }
 }
@@ -3908,7 +3914,7 @@ img.mfp-img {
   resize: none;
   line-height: normal;
   height: 2.425rem;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .footer {
@@ -4229,6 +4235,7 @@ img.mfp-img {
 		preloader: false,
 		focus: '#username',
 		closeOnBgClick: true,
+		autoFocusLast: false,
 		mainClass: 'mfp-fade'
 	});
 	$(document).on('click', '.events__modal-dismiss', function (e) {

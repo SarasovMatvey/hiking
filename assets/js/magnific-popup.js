@@ -5,6 +5,7 @@ $(function () {
 		preloader: false,
 		focus: '#username',
 		closeOnBgClick: true,
+		autoFocusLast: false,
 		mainClass: 'mfp-fade'
 	});
 	$(document).on('click', '.events__modal-dismiss', function (e) {
