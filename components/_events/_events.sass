@@ -92,8 +92,8 @@
             height: 5.4375rem
     &__btn-icon
         position: absolute
-        left: calc(50% - 0.9375rem)
-        top: calc(50% - 0.9375rem)
+        left: calc(41% - 0.9375rem)
+        top: calc(44% - 0.9375rem)
     .icon-plus
         font-size: 1.125rem
     &__card-modal
@@ -140,9 +140,20 @@
     &__modal-title
         font-size: 3rem
         margin-right: 2rem
+    &__modal-subtitle
+        font-size: 1.875rem
+        margin-bottom: 1.75rem
+        +media(1030px)
+            font-size: 1.5625rem
+            margin-bottom: 0.875rem
     &__modal-text
         font-size: 1.1rem
         line-height: 1.6
+        margin-bottom: 1.25rem
+        +media(1030px)
+            margin-bottom: 0.625rem
+        &:last-child
+            margin-bottom: 0
     &__modal-dismiss
         display: inline-block
         color: var(--c-light)
