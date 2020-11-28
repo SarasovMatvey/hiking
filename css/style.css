@@ -3540,9 +3540,6 @@ img.mfp-img {
 }
 .tours__icon {
   display: inline-block;
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
 }
 .tours__item-title {
   margin-bottom: 1.5625rem;

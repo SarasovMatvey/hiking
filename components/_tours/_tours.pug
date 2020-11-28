@@ -7,43 +7,55 @@ mixin tours(data)
             ul.tours__list.wow.fadeInLeft(data-wow-offset="300")
                 li.tours__item
                     .tours__icon-wrap
-                        picture
-                            source(srcset="../assets/img/icons/hiking-man.svg", type="image/svg+xml")
-                            img.tours__icon(src="../assets/img/icons/hiking-man.png", alt="hiking-man")
+                        //- picture
+                        //-     source(srcset="../assets/img/icons/hiking-man.svg", type="image/svg+xml")
+                        //-     img.tours__icon(src="../assets/img/icons/hiking-man.png", alt="hiking-man")
+                        svg.tours__icon(xmlns="http://www.w3.org/2000/svg", width="68" height="91")
+                            use(xlink:href="../assets/img/icons/sprites.svg#hiking-man")
                     +title("Hiking", "title_theme_card tours__item-title")
                     +text("Hiking. Just legs and nothing more", "tours__item-text")
                 li.tours__item
                     .tours__icon-wrap
-                        picture
-                            source(srcset="../assets/img/icons/mountain.svg", type="image/svg+xml")
-                            img.tours__icon(src="../assets/img/icons/mountain.png", alt="mountain")
+                        //- picture
+                        //-     source(srcset="../assets/img/icons/mountain.svg", type="image/svg+xml")
+                        //-     img.tours__icon(src="../assets/img/icons/mountain.png", alt="mountain")
+                        svg.tours__icon(xmlns="http://www.w3.org/2000/svg", width="86" height="87")
+                            use(xlink:href="../assets/img/icons/sprites.svg#mountain")
                     +title("Advanture", "title_theme_card tours__item-title")
                     +text("VIP tour, where you can overcome a specially selected route with a historical past and feel a surge of knowledge and emotions, in addition to watching wonderful views", "tours__item-text")
                 li.tours__item
                     .tours__icon-wrap
-                        picture
-                            source(srcset="../assets/img/icons/bicycle.svg", type="image/svg+xml")
-                            img.tours__icon(src="../assets/img/icons/bicycle.png", alt="bicycle")
+                        //- picture
+                        //-     source(srcset="../assets/img/icons/bicycle.svg", type="image/svg+xml")
+                        //-     img.tours__icon(src="../assets/img/icons/bicycle.png", alt="bicycle")
+                        svg.tours__icon(xmlns="http://www.w3.org/2000/svg", width="113" height="73")
+                            use(xlink:href="../assets/img/icons/sprites.svg#bicycle")
                     +title("biketour", "title_theme_card tours__item-title")
                     +text("Take your bike and ride with us along the magnificent trails of ancient forests and picturesque hills.", "tours__item-text")
                 li.tours__item
                     .tours__icon-wrap
-                        picture
-                            source(srcset="../assets/img/icons/car.svg", type="image/svg+xml")
-                            img.tours__icon(src="../assets/img/icons/car.png", alt="car")
+                        //- picture
+                        //-     source(srcset="../assets/img/icons/car.svg", type="image/svg+xml")
+                        //-     img.tours__icon(src="../assets/img/icons/car.png", alt="car")
+                        svg.tours__icon(xmlns="http://www.w3.org/2000/svg",  width="102" height="85")
+                            use(xlink:href="../assets/img/icons/sprites.svg#car")
                     +title("offroad", "title_theme_card tours__item-title")
                     +text("A car trip to distant places that hide their charms and secrets. You can choose your car or rent it from us.", "tours__item-text")
                 li.tours__item
                     .tours__icon-wrap
-                        picture
-                            source(srcset="../assets/img/icons/motorbike.svg", type="image/svg+xml")
-                            img.tours__icon(src="../assets/img/icons/motorbike.png", alt="motorbike")
+                        //- picture
+                        //-     source(srcset="../assets/img/icons/motorbike.svg", type="image/svg+xml")
+                        //-     img.tours__icon(src="../assets/img/icons/motorbike.png", alt="motorbike")
+                        svg.tours__icon(xmlns="http://www.w3.org/2000/svg", width="109" height="76")
+                            use(xlink:href="../assets/img/icons/sprites.svg#motorbike")
                     +title("Motobite", "title_theme_card tours__item-title")
                     +text("travel on fast and agile ATVs that can breathe spark into your ride. Let's ride with the breeze!", "tours__item-text")
                 li.tours__item
                     .tours__icon-wrap
-                        picture
-                            source(srcset="../assets/img/icons/pack.svg", type="image/svg+xml")
-                            img.tours__icon(src="../assets/img/icons/pack.png", alt="pack")
+                        //- picture
+                        //-     source(srcset="../assets/img/icons/pack.svg", type="image/svg+xml")
+                        //-     img.tours__icon(src="../assets/img/icons/pack.png", alt="pack")
+                        svg.tours__icon(xmlns="http://www.w3.org/2000/svg", width="78" height="91")
+                            use(xlink:href="../assets/img/icons/sprites.svg#pack")
                     +title("essential", "title_theme_card tours__item-title")
                     +text("One week survival course. This will teach you the necessary skills.", "tours__item-text")
