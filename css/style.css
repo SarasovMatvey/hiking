@@ -3553,12 +3553,6 @@ img.mfp-img {
 .testimonial {
   padding: 7.1875rem 0 5.4rem;
   text-align: center;
-  --nav-icon-position: -10.375rem;
-}
-@media screen and (max-width: 1200px) {
-  .testimonial {
-    --nav-icon-position: -6.375rem;
-  }
 }
 .testimonial__defs {
   position: absolute;
@@ -3589,7 +3583,6 @@ img.mfp-img {
   height: 9.375rem;
 }
 .testimonial__img {
-  clip-path: url(#testimonial__clip-mask);
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -3641,10 +3634,20 @@ img.mfp-img {
   }
 }
 .testimonial__nav-icon_left {
-  left: var(--nav-icon-position);
+  left: -10.375rem;
+}
+@media screen and (max-width: 1200px) {
+  .testimonial__nav-icon_left {
+    left: -6.375rem;
+  }
 }
 .testimonial__nav-icon_right {
-  right: var(--nav-icon-position);
+  right: -10.375rem;
+}
+@media screen and (max-width: 1200px) {
+  .testimonial__nav-icon_right {
+    right: -6.375rem;
+  }
 }
 @media screen and (max-width: 700px) {
   .testimonial .owl-dots {
