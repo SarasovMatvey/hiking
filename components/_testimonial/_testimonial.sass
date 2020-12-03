@@ -1,9 +1,7 @@
 .testimonial
     padding: 7.1875rem 0 5.4rem
     text-align: center
-    --nav-icon-position: -10.375rem
-    +media(1200px)
-        --nav-icon-position: -6.375rem
+    
     &__defs
         position: absolute
         z-index: -1
@@ -23,9 +21,7 @@
         margin-bottom: 1.875rem
         width: 8.125rem
         height: 9.375rem
-        // clip-path: polygon(50% 0, 100% 25.3%, 100% 74.7%, 50% 100%, 0 74.7%, 0 25.3%)
     &__img
-        clip-path: url(#testimonial__clip-mask)
         +img-cover
     &__slider-title
         margin-bottom: 0.85rem
@@ -56,9 +52,13 @@
             font-size: 5rem
             opacity: 0.7
     &__nav-icon_left
-        left: var(--nav-icon-position)
+        left: -10.375rem
+        +media(1200px)
+            left: -6.375rem
     &__nav-icon_right
-        right: var(--nav-icon-position)
+        right: -10.375rem
+        +media(1200px)
+            right: -6.375rem
     .owl-dots
         +media(700px)
             display: none

@@ -20,23 +20,22 @@ html.no-js(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Hiking
         link(rel="shortcut icon", href="../assets/img/favicon.ico", type="image/x-icon")
-        script
-            include ../../../assets/js/ie-variables.js
-            include ../../../assets/js/modernizr.js
-        style
-            include ../../../css/style.css
+        link(rel="stylesheet", href="/css/style.css")
     body
         .wrapper
             block content
-        script
-            include ../../../node_modules/jquery/dist/jquery.min.js
-            include ../../../node_modules/object-fit-images/dist/ofi.min.js
-            include ../../../node_modules/owl.carousel/dist/owl.carousel.min.js
-            include ../../../node_modules/wow.js/dist/wow.min.js
-            include ../../../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js
-        script
-            include ../../../assets/js/base.js
-            include ../../../assets/js/owl-carousel.js
-            include ../../../assets/js/wow.js       
-            include ../../../assets/js/magnific-popup.js       
-            include ../../../assets/js/ofi.js
+        //- libs js
+        script(src="../node_modules/jquery/dist/jquery.min.js")
+        script(src="../node_modules/object-fit-images/dist/ofi.min.js")
+        script(src="../node_modules/owl.carousel/dist/owl.carousel.min.js")
+        script(src="../node_modules/wow.js/dist/wow.min.js")
+        script(src="../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js")
+        script(src="../node_modules/css-vars-ponyfill/dist/css-vars-ponyfill.min.js")
+        //- my js
+        script(src="../assets/js/base.js")
+        script(src="../assets/js/ie-variables.js")
+        script(src="../assets/js/owl-carousel.js")
+        script(src="../assets/js/wow.js")
+        script(src="../assets/js/magnific-popup.js")
+        script(src="../assets/js/ofi.js")
+        script(src="../assets/js/modernizr.js")
