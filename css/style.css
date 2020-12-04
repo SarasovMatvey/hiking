@@ -3383,6 +3383,7 @@ img.mfp-img {
   }
 }
 .hero__link {
+  display: inline-block;
   margin-top: 1.0625rem;
   text-transform: uppercase;
   font-size: 1.0625rem;
@@ -3989,7 +3990,13 @@ img.mfp-img {
   align-items: center;
 }
 .footer__copy {
+  display: inline-block;
   margin-right: 1.25rem;
+  flex: 0 1 auto;
+}
+.footer__ps {
+  display: inline-block;
+  flex: 0 1 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
