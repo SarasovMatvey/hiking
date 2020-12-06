@@ -16,21 +16,29 @@ include ../../../components/_footer/_footer.pug
 <!DOCTYPE html>
 html.no-js(lang="en")
     head
+        //- it's important to place this script in head
+
+        script
+            include ../../js/no-js.js
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Hiking
         link(rel="shortcut icon", href="../assets/img/favicon.ico", type="image/x-icon")
         link(rel="stylesheet", href="../css/style.css")
 
-        // preload
+        //- preload
         
-        link(rel="preload", href="../assets/img/header-bg.webp", as="image", type="image/webp")
         link(rel="preload", href="../assets/fonts/Lato/Lato-Black/lato-black-webfont.woff2", as="font", type="font/woff2", crossorigin="anonymous")
         link(rel="preload", href="../assets/fonts/Lato/Lato-Bold/lato-bold-webfont.woff2", as="font", type="font/woff2", crossorigin="anonymous")
         link(rel="preload", href="../assets/fonts/Lato/Lato-Light/lato-light-webfont.woff2", as="font", type="font/woff2", crossorigin="anonymous")
         link(rel="preload", href="../assets/fonts/PTSans/PTSans-Bold/ptsans-bold-webfont.woff2", as="font", type="font/woff2", crossorigin="anonymous")
         link(rel="preload", href="../assets/fonts/SourceSansPro/SourceSansPro-Regular/sourcesanspro-regular-webfont.woff2", as="font", type="font/woff2", crossorigin="anonymous")
         link(rel="preload", href="../assets/fonts/icomoon/icomoon.ttf?yca2ua", as="font", type="font/ttf", crossorigin="anonymous")
+
+        //- critical styles
+
+        style
+          include ../../../css/critical-style.css
     body
         .wrapper
             block content
@@ -42,7 +50,6 @@ html.no-js(lang="en")
         script(src="../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js")
         script(src="../node_modules/css-vars-ponyfill/dist/css-vars-ponyfill.min.js")
         //- my js
-        script(src="../assets/js/base.js")
         script(src="../assets/js/ie-variables.js")
         script(src="../assets/js/owl-carousel.js")
         script(src="../assets/js/wow.js")
