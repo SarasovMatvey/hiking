@@ -1,9 +1,18 @@
 .about-us
     text-align: center
     padding: 6.125rem 0
+    
+    &::before
+        content: ''
+        display: block
+        height: 200px
+        margin-top: -200px
+        visibility: hidden
+        pointer-events: none
     &__container
         max-width: 60rem
     &__title
         margin-bottom: 2.5375rem
     &__text
         line-height: 1.8
+    

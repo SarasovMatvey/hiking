@@ -31,6 +31,16 @@
 		&
 			@content
 
+=media-height($width)
+	@media screen and ( max-height: $width )
+		&
+			@content
+
+=min-media-height($width)
+	@media screen and ( min-height: $width )
+		&
+			@content
+
 =placeholder
 	&::-webkit-input-placeholder
 		@content
@@ -47,4 +57,12 @@
 =colorVar($name, $color)
 	--#{$name}: #{$color}
 	--#{$name}-rgb: #{hexToRGB($color)}
+
+=anchorLinkOffset($offset)
+	// support css custom properies
+	border-top: $offset solid transparent
+	margin-top: calc(#{$offset} * -1)
+	-webkit-background-clip: padding-box
+	-moz-background-clip: padding
+	background-clip: padding-box
 
