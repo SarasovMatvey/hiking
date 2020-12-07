@@ -40,3 +40,11 @@
 		@content
 	&::-ms-input-placeholder
 		@content
+
+@function hexToRGB($hex)
+	@return red($hex), green($hex), blue($hex)
+
+=colorVar($name, $color)
+	--#{$name}: #{$color}
+	--#{$name}-rgb: #{hexToRGB($color)}
+
