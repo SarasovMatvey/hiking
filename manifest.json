@@ -1,0 +1,13 @@
+{
+    "name": "Hiking",
+    "short_name": "Hiking",
+    "icons": [{
+          "src": "assets/manifest/logo.png",
+          "sizes": "148x148",
+          "type": "image/png"
+        }],
+    "start_url": "/hiking/pages/",
+    "display": "fullscreen",
+    "background_color": "#b12c25",
+    "theme_color": "#b12c25"
+  }
